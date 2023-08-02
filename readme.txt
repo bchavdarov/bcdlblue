@@ -1,4 +1,4 @@
-=== BCDLpurple ===
+=== BCDLblue ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -10,11 +10,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called BCDLpurple.
+A starter theme called BCDLblue.
 
 == Description ==
 
-BCDL Purple theme based on Underscores and Bootstrap
+BCDL Blue theme based on Underscores and Bootstrap
 
 == Installation ==
 
@@ -26,7 +26,7 @@ BCDL Purple theme based on Underscores and Bootstrap
 
 = Does this theme support any plugins? =
 
-BCDLpurple includes support for WooCommerce and for Infinite Scroll in Jetpack.
+BCDLblue includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

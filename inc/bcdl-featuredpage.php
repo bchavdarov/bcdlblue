@@ -3,8 +3,8 @@
 //Featured page section
 $wp_customize->add_section( 'bcdl-featuredpage' , 
   array(
-    'title'      => __( 'Featured page', 'bcdlpurple' ),
-    'description' => __( 'Select featured page to display', 'bcdlpurple' ),
+    'title'      => __( 'Featured page', 'bcdlblue' ),
+    'description' => __( 'Select featured page to display', 'bcdlblue' ),
     'priority'   => 220,
   ) 
 );
@@ -42,7 +42,7 @@ $wp_customize->add_setting( 'bcdl-featuredpage-sbtlset',
     array(
       'type' => 'textarea',
       'section' => 'bcdl-featuredpage', // Add a default or your own section
-      'label' => __( 'Type content here', 'bcdlpurple' ),
+      'label' => __( 'Type content here', 'bcdlblue' ),
       'settings' => 'bcdl-featuredpage-sbtlset',
     )
   );

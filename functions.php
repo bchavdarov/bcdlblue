@@ -1,10 +1,10 @@
 <?php
 /**
- * BCDLpurple functions and definitions
+ * BCDLblue functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-if ( ! function_exists( 'bcdlpurple_setup' ) ) :
+if ( ! function_exists( 'bcdlblue_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,14 +20,14 @@ if ( ! function_exists( 'bcdlpurple_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function bcdlpurple_setup() {
+	function bcdlblue_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on BCDLpurple, use a find and replace
-		 * to change 'bcdlpurple' to the name of your theme in all the template files.
+		 * If you're building a theme based on BCDLblue, use a find and replace
+		 * to change 'bcdlblue' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'bcdlpurple', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'bcdlblue', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -50,9 +50,9 @@ if ( ! function_exists( 'bcdlpurple_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				//'main-menu' => esc_html__( 'Main menu', 'bcdlpurple' ),
-				//'menu-1' => esc_html__( 'Primary', 'bcdlpurple' ),
-				'primary' => esc_html__( 'Primary Menu', 'bcdlpurple' ),
+				//'main-menu' => esc_html__( 'Main menu', 'bcdlblue' ),
+				//'menu-1' => esc_html__( 'Primary', 'bcdlblue' ),
+				'primary' => esc_html__( 'Primary Menu', 'bcdlblue' ),
 			)
 		);
 
@@ -77,7 +77,7 @@ if ( ! function_exists( 'bcdlpurple_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'bcdlpurple_custom_background_args',
+				'bcdlblue_custom_background_args',
 				array(
 					'default-color' => 'ffffff',
 					'default-image' => '',
@@ -104,7 +104,7 @@ if ( ! function_exists( 'bcdlpurple_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'bcdlpurple_setup' );
+add_action( 'after_setup_theme', 'bcdlblue_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -113,22 +113,22 @@ add_action( 'after_setup_theme', 'bcdlpurple_setup' );
  *
  * @global int $content_width
  */
-function bcdlpurple_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'bcdlpurple_content_width', 640 );
+function bcdlblue_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'bcdlblue_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'bcdlpurple_content_width', 0 );
+add_action( 'after_setup_theme', 'bcdlblue_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function bcdlpurple_widgets_init() {
+function bcdlblue_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'bcdlpurple' ),
+			'name'          => esc_html__( 'Sidebar', 'bcdlblue' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'bcdlpurple' ),
+			'description'   => esc_html__( 'Add widgets here.', 'bcdlblue' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -138,9 +138,9 @@ function bcdlpurple_widgets_init() {
 	
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'BCDLFooterMap', 'bcdlpurple' ),
+			'name'          => esc_html__( 'BCDLFooterMap', 'bcdlblue' ),
 			'id'            => 'footermap',
-			'description'   => esc_html__( 'Add widgets here.', 'bcdlpurple' ),
+			'description'   => esc_html__( 'Add widgets here.', 'bcdlblue' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -150,9 +150,9 @@ function bcdlpurple_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'BCDLFooterWidget1', 'bcdlpurple' ),
+			'name'          => esc_html__( 'BCDLFooterWidget1', 'bcdlblue' ),
 			'id'            => 'footerwdg-1',
-			'description'   => esc_html__( 'Add widgets here.', 'bcdlpurple' ),
+			'description'   => esc_html__( 'Add widgets here.', 'bcdlblue' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -162,9 +162,9 @@ function bcdlpurple_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'BCDLFooterWidget2', 'bcdlpurple' ),
+			'name'          => esc_html__( 'BCDLFooterWidget2', 'bcdlblue' ),
 			'id'            => 'footerwdg-2',
-			'description'   => esc_html__( 'Add widgets here.', 'bcdlpurple' ),
+			'description'   => esc_html__( 'Add widgets here.', 'bcdlblue' ),
 			'before_widget' => '<div>',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -172,22 +172,22 @@ function bcdlpurple_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'bcdlpurple_widgets_init' );
+add_action( 'widgets_init', 'bcdlblue_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function bcdlpurple_scripts() {
-	wp_enqueue_style( 'bcdlpurple-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'bcdlpurple-style', 'rtl', 'replace' );
+function bcdlblue_scripts() {
+	wp_enqueue_style( 'bcdlblue-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'bcdlblue-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'bcdlpurple-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'bcdlblue-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'bcdlpurple_scripts' );
+add_action( 'wp_enqueue_scripts', 'bcdlblue_scripts' );
 
 /**
  * Implement the Custom Header feature.

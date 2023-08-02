@@ -4,8 +4,8 @@
 //BCDL Featured posts section:
 $wp_customize->add_section( 'bcdl-featured-posts' , 
 array(
-  'title'      => __( 'Featured posts grid', 'bcdlpurple' ),
-  'description' => __( 'Select featured posts', 'bcdlpurple' ),
+  'title'      => __( 'Featured posts grid', 'bcdlblue' ),
+  'description' => __( 'Select featured posts', 'bcdlblue' ),
   'priority'   => 260,
 ) 
 );
@@ -24,8 +24,8 @@ $wp_customize->add_control( 'bcdl-fptitle',
 array(
   'type' => 'text',
   'section' => 'bcdl-featured-posts', // Add a default or your own section
-  'label' => __( 'Type section title', 'bcdlpurple' ),
-  //'description' => __( 'This is the title text box.', 'bcdlpurple' ),
+  'label' => __( 'Type section title', 'bcdlblue' ),
+  //'description' => __( 'This is the title text box.', 'bcdlblue' ),
   'settings' => 'bcdl-featuredposts-title',
 )
 );
@@ -44,7 +44,7 @@ $wp_customize->add_control( 'bcdl-fpsubtitle',
 array(
   'type' => 'textarea',
   'section' => 'bcdl-featured-posts', // Add a default or your own section
-  'label' => __( 'Type section subtitle', 'bcdlpurple' ),
+  'label' => __( 'Type section subtitle', 'bcdlblue' ),
   'settings' => 'bcdl-featuredposts-subtitle',
 )
 );
@@ -57,8 +57,8 @@ $wp_customize->add_setting( 'bcdl-featuredpost-category', array(
 $wp_customize->add_control( new BCDL_Dropdown_Category_Control( 
 $wp_customize, 'bcdl-featuredpost-categoryset', array(
   'section'       => 'bcdl-featured-posts',
-  'label'         => esc_html__( 'Featured posts category', 'bcdlpurple' ),
-  'description'   => esc_html__( 'Select featured posts category', 'bcdlpurple' ),
+  'label'         => esc_html__( 'Featured posts category', 'bcdlblue' ),
+  'description'   => esc_html__( 'Select featured posts category', 'bcdlblue' ),
   'settings'      => 'bcdl-featuredpost-category',
 ) ) );
 
@@ -116,7 +116,7 @@ for ($i=0; $i < 8; $i++) { //the counter is i
   $wp_customize->add_control( new WP_Customize_Control( 
     $wp_customize, 'bcdl-featuredposts-list'.$i, 
       array( 
-        'label' => __( 'Featured post '.strval($i+1), 'bcdlpurple' ), //check the .pot file
+        'label' => __( 'Featured post '.strval($i+1), 'bcdlblue' ), //check the .pot file
         'section' => 'bcdl-featured-posts', 
         'type' => 'select',
         'settings' => 'bcdl-featuredpost-set'.$i,
@@ -138,7 +138,7 @@ for ($i=0; $i < 8; $i++) { //the counter is i
   $wp_customize->add_control(new WP_Customize_Control (
       $wp_customize, 'bcdl_svgset_select'.$i, 
       array(
-        'label' => __( 'Choose svg file '.strval($i+1), 'bcdlpurple' ), //check the .pot file
+        'label' => __( 'Choose svg file '.strval($i+1), 'bcdlblue' ), //check the .pot file
         'section' => 'bcdl-featured-posts', 
         'type' => 'select',
         'settings' => 'bcdl_svgset'.$i,

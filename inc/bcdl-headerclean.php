@@ -9,8 +9,8 @@ bcdl_section_add( $wp_customize, 200, 'bcdl-header', 'Header section', 'Header s
 
 /*$wp_customize->add_section( 'bcdl-header' , 
 		array(
-	    'title'      => __( 'Frontpage Header', 'bcdlpurple' ),
-	    'description' => __( 'Select image for the header.', 'bcdlpurple' ),
+	    'title'      => __( 'Frontpage Header', 'bcdlblue' ),
+	    'description' => __( 'Select image for the header.', 'bcdlblue' ),
 	    'priority'   => 200,
 		) 
 	);
@@ -28,7 +28,7 @@ $wp_customize->add_setting( 'bcdl-header-set',
 $wp_customize->add_control( new WP_Customize_Media_Control( 
   $wp_customize, 'bcdl-headerctrl', 
     array( 
-      'label' => __( 'Select Header image', 'bcdlpurple' ), //check the .pot file
+      'label' => __( 'Select Header image', 'bcdlblue' ), //check the .pot file
       'section' => 'bcdl-header', 
       'settings' => 'bcdl-header-set',
     ) 

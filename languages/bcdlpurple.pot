@@ -2,8 +2,8 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: BCDLpurple 2.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bcdlpurple\n"
+"Project-Id-Version: BCDLblue 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bcdlblue\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,18 +12,18 @@ msgstr ""
 "POT-Creation-Date: 2022-12-12T17:44:08+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
-"X-Domain: bcdlpurple\n"
+"X-Domain: bcdlblue\n"
 
 #. Theme Name of the theme
-msgid "BCDLpurple"
+msgid "BCDLblue"
 msgstr ""
 
 #. Theme URI of the theme
-msgid "https://github.com/bchavdarov/bcdlpurple"
+msgid "https://github.com/bchavdarov/bcdlblue"
 msgstr ""
 
 #. Description of the theme
-msgid "BCDL Purple theme based on Underscores and Bootstrap"
+msgid "BCDL Blue theme based on Underscores and Bootstrap"
 msgstr ""
 
 #. Author of the theme
