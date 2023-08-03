@@ -1,6 +1,6 @@
-# BCDLpurple
-BCDLpurple is a responsive, flexible and user-friendly theme for WordPress based on `underscores` and `Bootstrap 5`. 
-Although it is functional, the theme is still under development, and will be continually updated.
+# BCDLblue 
+BCDLblue is an extended version of BCDLpurple, which is a responsive, flexible and user-friendly theme for WordPress based on `underscores` and `Bootstrap 5`. 
+BCDLblue is still under construction, that's why it is better to use BCDLpurple. I mean the purple hasn't turned to blue yet. :)
 
 Installation
 ---------------
