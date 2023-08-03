@@ -1,0 +1,127 @@
+/*Custom code to be placed here!*/
+
+//$primary: #49f;
+
+/*==========variables==========*/
+
+
+/*==========rules==========*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans+Condensed:300|Poiret+One|Tenor+Sans&display=swap&subset=cyrillic,cyrillic-ext');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+html, body, .site {
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.aheader {
+	background-repeat: no-repeat; 
+	background-size: cover; 
+	background-position: center center;
+}
+
+.custom-logo {
+	max-height: 2em;
+	margin: 0.5em;
+	width: auto;
+}
+
+.clearlink, 
+.clearlink:active, 
+.clearlink:focus,
+.clearlink:visited {
+  outline: 0;
+  -moz-outline-style: none;
+}
+
+.bcdl-mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	//background-color: rgb(49, 110, 190);
+	//background-color: rgb(5, 44, 101);
+	//background-color: #052c65;
+	opacity: 0.4;
+	transition: all 1s;
+}
+
+.bcdl-mask-contain:hover > .bcdl-mask {
+	opacity: 0.95;
+}
+
+.bcdl-mask-contain:hover > * > .bcdl-mask {
+	opacity: 0.95;
+}
+
+.bcdl-hoverup {
+	transition: all 1s;
+	margin-top: 3em;
+	opacity: 0;
+}
+
+.bcdl-mask-contain:hover > * > .bcdl-hoverup {
+	margin-top: 0;
+	opacity: 1;
+}
+
+.bcdl-masked-link {
+	width: 100%;
+	height: 100%;
+	//padding-top: 100%;
+	padding-top: 50%;
+	padding-bottom: 50%;
+	background-size: cover;
+	background-position: center;
+}
+
+.bcdl-evcont {
+	p {
+		display: none;
+	}
+	
+	p:first-of-type, p:last-of-type {
+		display: block;
+	}
+
+	.bcdl-gallery {
+		display: none;
+	}
+}
+
+.bcdl-icon {
+	max-width: 5rem;
+}
+
+.bcdl-blue {
+	background-color: #052c65;
+}
+
+.bcdl-purple {
+	background-color: #a020f0;
+}
+
+.bcdl-osc {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.bcdl-os {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.bcdl-rob {
+	font-family: 'Roboto Condensed', sans-serif; 
+}
+
+
+.bcdl-svg-icon {
+	filter: invert(17%) sepia(72%) saturate(2948%) hue-rotate(214deg) brightness(91%) contrast(103%);
+	//filter: invert(16%) sepia(78%) saturate(1311%) hue-rotate(192deg) brightness(87%) contrast(105%);
+	//filter: invert(27%) sepia(91%) saturate(878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+
+.bcdl-svg-icon:hover {
+	filter: invert(45%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
