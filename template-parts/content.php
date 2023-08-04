@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
 ?>
@@ -22,14 +22,14 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				bcdlpurple_posted_on();
-				bcdlpurple_posted_by();
+				bcdlblue_posted_on();
+				bcdlblue_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php bcdlpurple_post_thumbnail(); ?>
+	<?php bcdlblue_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -37,7 +37,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'bcdlpurple' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'bcdlblue' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -50,7 +50,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bcdlpurple' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bcdlblue' ),
 				'after'  => '</div>',
 			)
 		);
@@ -58,6 +58,6 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php bcdlpurple_entry_footer(); ?>
+		<?php bcdlblue_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

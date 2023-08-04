@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
 ?>
@@ -29,7 +29,7 @@ if ( is_singular() ) : ?>
 			the_title( '<h1 class="page-title text-uppercase text-white px-2 bcdl-rob fw-bolder text-center">', '</h1>' );
 		elseif ( is_search() ) : ?>
 			<h1 class="page-title text-uppercase text-white px-2 bcdl-rob fw-bolder text-center">
-				<?php printf( esc_html__( 'Search Results for: %s', 'bcdlpurple' ), ' <span>' . get_search_query() . '</span>' ); ?>
+				<?php printf( esc_html__( 'Search Results for: %s', 'bcdlblue' ), ' <span>' . get_search_query() . '</span>' ); ?>
 			</h1>
 		<?php else : ?>
 			<h1 class="page-title text-uppercase text-white px-2 bcdl-rob fw-bolder text-center"><?php single_term_title() ?></h1>

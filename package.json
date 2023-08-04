@@ -1,7 +1,7 @@
 {
-  "name": "bcdlpurple",
+  "name": "bcdlblue",
   "version": "3.0.0",
-  "description": "A purple theme based on Underscores and Bootstrap.",
+  "description": "A blue theme based on Underscores and Bootstrap.",
   "author": "BCDLab",
   "license": "GPL-2.0-or-later",
   "keywords": [
@@ -9,13 +9,13 @@
     "Bootstrap",
     "Theme"
   ],
-  "homepage": "https://github.com/bchavdarov/bcdlpurple",
+  "homepage": "https://github.com/bchavdarov/bcdlblue",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bchavdarov/bcdlpurple"
+    "url": "git+https://github.com/bchavdarov/bcdlblue"
   },
   "bugs": {
-    "url": "https://github.com/bchavdarov/bcdlpurple/issues"
+    "url": "https://github.com/bchavdarov/bcdlblue/issues"
   },
   "devDependencies": {
     "@wordpress/scripts": "^26.9.0",

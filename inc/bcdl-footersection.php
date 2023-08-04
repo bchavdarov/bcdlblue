@@ -2,8 +2,8 @@
 //Footer section
 	$wp_customize->add_section( 'bcdl-footer' , 
 		array(
-	    'title'      => __( 'Footer', 'bcdlpurple' ),
-	    'description' => __( 'Footer section settings', 'bcdlpurple' ),
+	    'title'      => __( 'Footer', 'bcdlblue' ),
+	    'description' => __( 'Footer section settings', 'bcdlblue' ),
 	    'priority'   => 380,
 		) 
 	);
@@ -21,7 +21,7 @@
 		array(
 			'type' => 'text',
 			'section' => 'bcdl-footer', // Add a default or your own section
-			'label' => __( 'Type section title', 'bcdlpurple' ),
+			'label' => __( 'Type section title', 'bcdlblue' ),
 			'settings' => 'bcdl-section-footer01',
 		)
 	);
@@ -39,7 +39,7 @@
 		array(
 			'type' => 'textarea',
 			'section' => 'bcdl-footer', // Add a default or your own section
-			'label' => __( 'Type content here', 'bcdlpurple' ),
+			'label' => __( 'Type content here', 'bcdlblue' ),
 			'settings' => 'bcdl-content-footer01',
 		)
 	);

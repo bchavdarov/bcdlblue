@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
 ?>
@@ -17,7 +17,7 @@
 
 				<?php if ( is_page() ) : ?>
 
-				<?php bcdlpurple_post_thumbnail(); ?>
+				<?php bcdlblue_post_thumbnail(); ?>
 
 				<?php endif; ?>
 
@@ -47,7 +47,7 @@
 			</div><!-- .entry-content -->
 
 			<footer class="entry-footer">
-				<?php //bcdlpurple_entry_footer(); ?>
+				<?php //bcdlblue_entry_footer(); ?>
 			</footer><!-- .entry-footer -->
 		</div>
 	</article><!-- #post-<?php the_ID(); ?> -->

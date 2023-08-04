@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
 ?>
@@ -15,10 +15,10 @@
 		get_template_part( 'template-parts/section', 'footer' );
 	?>
 	<footer id="colophon" class="site-footer">
-		<div class="bcdl-purple site-info bcdl-osc text-center">
+		<div class="bcdl-blue site-info bcdl-osc text-center">
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bcdlpurple' ), 'bcdlpurple', '<a href="https://bchavdarov.github.io/bcdlab/">Boncho Chavdarov @ BCDLab</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'bcdlblue' ), 'bcdlblue', '<a href="https://bchavdarov.github.io/bcdlab/">Boncho Chavdarov @ BCDLab</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

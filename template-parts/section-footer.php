@@ -4,14 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
 ?>
 
 <!--Footer section-->
 <section id="footer" class="">
-	<div class="wrapper bcdl-purple py-4" id="wrapper-footer">
+	<div class="wrapper bcdl-blue py-4" id="wrapper-footer">
 
 		<div class="container">
 
@@ -19,7 +19,7 @@
 
 				<div class="col-md-6" data-aos="zoom-in-right" data-aos-delay="350" data-aos-anchor-placement="top-bottom">
 
-					<h5 class=""><?php _e( 'Our location', 'bcdlpurple' ); ?></h5>
+					<h5 class=""><?php _e( 'Our location', 'bcdlblue' ); ?></h5>
 					
 				  <div class="map-responsive" style="overflow:hidden; padding-bottom:70%; position:relative; height:0;">
 
@@ -64,11 +64,11 @@
 		</div><!-- container end -->
 
 	</div><!-- wrapper end -->
-	<div class="bcdl-purple text-muted">
+	<div class="bcdl-blue text-muted">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-					<p class="d-block text-md-left text-center"><?php _e( 'All rights reserved', 'bcdlpurple' ); ?>, &copy; <?php echo date("Y"); ?>, <?php echo esc_html( get_bloginfo( 'name' ) ); ?></p>
+					<p class="d-block text-md-left text-center"><?php _e( 'All rights reserved', 'bcdlblue' ); ?>, &copy; <?php echo date("Y"); ?>, <?php echo esc_html( get_bloginfo( 'name' ) ); ?></p>
 				</div>
 				<div class="col-md-4">
 					<p class="d-block text-md-right text-center" style="font-family: 'Open Sans Condensed', sans-serif;"><a href="https://bchavdarov.github.io/bcdlab/" target="_blank">Developed by bchavdarov @ BCDLab</a></p>

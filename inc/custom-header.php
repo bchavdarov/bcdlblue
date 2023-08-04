@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses bcdlpurple_header_style()
+ * @uses bcdlblue_header_style()
  */
-function bcdlpurple_custom_header_setup() {
+function bcdlblue_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'bcdlpurple_custom_header_args',
+			'bcdlblue_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'bcdlpurple_header_style',
+				'wp-head-callback'   => 'bcdlblue_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'bcdlpurple_custom_header_setup' );
+add_action( 'after_setup_theme', 'bcdlblue_custom_header_setup' );
 
-if ( ! function_exists( 'bcdlpurple_header_style' ) ) :
+if ( ! function_exists( 'bcdlblue_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see bcdlpurple_custom_header_setup().
+	 * @see bcdlblue_custom_header_setup().
 	 */
-	function bcdlpurple_header_style() {
+	function bcdlblue_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

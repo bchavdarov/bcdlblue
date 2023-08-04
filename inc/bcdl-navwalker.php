@@ -1,13 +1,13 @@
 <?php
 /**
- * BCDLpurple Theme Customizer
+ * BCDLblue Theme Customizer
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
-if ( ! class_exists( 'BCDL_Purple_Navwalker' ) ) :
+if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
 
-  class BCDL_Purple_Navwalker extends Walker_Nav_Menu {
+  class BCDL_Blue_Navwalker extends Walker_Nav_Menu {
     
     function start_lvl(&$output, $depth=0, $args=null) {
       $bcdl_ulclass = '';

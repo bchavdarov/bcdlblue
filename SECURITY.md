@@ -13,4 +13,4 @@ Currently version 2.0 and higher are supported.
 ## Reporting a Vulnerability
 
 Vulnerabilities and any issues can be reported at
-GitHub bcdlpurple [issues](https://github.com/bchavdarov/bcdlpurple/issues "bcdlpurple issues")
+GitHub bcdlblue [issues](https://github.com/bchavdarov/bcdlblue/issues "bcdlblue issues")

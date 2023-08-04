@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
 $headerId = get_theme_mod( 'bcdl-header-set' ); 

@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
 ?>
@@ -36,12 +36,12 @@
 <div id="page" class="site">
 
 	<div id="wrapper-navbar">
-		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bcdlpurple' ); ?></a>
+		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bcdlblue' ); ?></a>
 
 		<header id="masthead" class="site-header">
 
 
-		<!-- BCDL_Purple_Navwalker -->
+		<!-- BCDL_Blue_Navwalker -->
 		<nav id="bcdl-main-navigation" class="main-navigation navbar navbar-expand-md navbar-light bg-light">
 			<div class="container-fluid">
 			<div class="site-branding">
@@ -56,10 +56,10 @@
 					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 					<?php
 				endif;
-				$bcdlpurple_description = get_bloginfo( 'description', 'display' );
-				if ( $bcdlpurple_description || is_customize_preview() ) :
+				$bcdlblue_description = get_bloginfo( 'description', 'display' );
+				if ( $bcdlblue_description || is_customize_preview() ) :
 					?>
-					<p class="site-description"><?php echo $bcdlpurple_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+					<p class="site-description"><?php echo $bcdlblue_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
@@ -73,7 +73,7 @@
 							'theme_location'    => 'primary',
 							'menu_class'        => 'navbar-nav me-auto mb-2 mb-lg-0',
 							'container'         => 'false',
-							'walker'            => new BCDL_Purple_Navwalker(),
+							'walker'            => new BCDL_Blue_Navwalker(),
 						] );
 				?>
 
@@ -109,7 +109,7 @@
 				</div>
 			</div>
 		</nav>
-		<!-- end of BCDL_Purple_Navwalker -->
+		<!-- end of BCDL_Blue_Navwalker -->
 
 		
 		</header><!-- #masthead -->

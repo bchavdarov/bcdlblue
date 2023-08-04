@@ -5,7 +5,7 @@
  * 
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package BCDLpurple
+ * @package BCDLblue
  */
 
   //The background images
@@ -52,7 +52,7 @@
         <div class="card bcdl-mask-contain text-white">
           <a class="stretched-link bcdl-masked-link rounded" href="<?php echo esc_url(get_category_link($bcdlfeaturecat01)); ?>" style="background-image: url('<?php echo wp_get_attachment_url( $feature1Id ) ?>');">
           </a>
-          <div class="bcdl-mask bcdl-purple rounded"></div>
+          <div class="bcdl-mask bcdl-blue rounded"></div>
           <div class="card-img-overlay">
             <h3 class="card-title bcdl-osc"><?php echo $featurecaption01; ?></h3>
             <hr class="bg-white bcdl-hoverup">
@@ -66,7 +66,7 @@
         <div class="card bcdl-mask-contain text-white">
           <a class="stretched-link bcdl-masked-link rounded" href="<?php echo esc_url(get_category_link($bcdlfeaturecat02)); ?>" style="background-image: url('<?php echo wp_get_attachment_url( $feature2Id ) ?>');">
           </a>
-          <div class="bcdl-mask bcdl-purple rounded"></div>
+          <div class="bcdl-mask bcdl-blue rounded"></div>
           <div class="card-img-overlay">
             <h3 class="card-title bcdl-osc"><?php echo $featurecaption02; ?></h3>
             <hr class="bg-white bcdl-hoverup">
@@ -80,7 +80,7 @@
         <div class="card bcdl-mask-contain text-white">
           <a class="stretched-link bcdl-masked-link rounded" href="<?php echo esc_url(get_category_link($bcdlfeaturecat03)); ?>" style="background-image: url('<?php echo wp_get_attachment_url( $feature3Id ) ?>');">
           </a>
-          <div class="bcdl-mask bcdl-purple rounded"></div>
+          <div class="bcdl-mask bcdl-blue rounded"></div>
           <div class="card-img-overlay">
             <h3 class="card-title bcdl-osc"><?php echo $featurecaption03; ?></h3>
             <hr class="bg-white bcdl-hoverup">
@@ -94,7 +94,7 @@
         <div class="card bcdl-mask-contain text-white">
           <a class="stretched-link bcdl-masked-link rounded" href="<?php echo esc_url(get_category_link($bcdlfeaturecat04)); ?>" style="background-image: url('<?php echo wp_get_attachment_url( $feature4Id ) ?>');">
           </a>
-          <div class="bcdl-mask bcdl-purple rounded"></div>
+          <div class="bcdl-mask bcdl-blue rounded"></div>
           <div class="card-img-overlay">
             <h3 class="card-title bcdl-osc"><?php echo $featurecaption04; ?></h3>
             <hr class="bg-white bcdl-hoverup">
@@ -110,7 +110,7 @@
         <div class="card bcdl-mask-contain text-white">
           <a class="stretched-link bcdl-masked-link rounded" href="<?php echo esc_url(get_category_link($bcdlfeaturecat05)); ?>" style="background-image: url('<?php echo wp_get_attachment_url( $feature5Id ) ?>');">
           </a>
-          <div class="bcdl-mask bcdl-purple rounded"></div>
+          <div class="bcdl-mask bcdl-blue rounded"></div>
           <div class="card-img-overlay">
             <h3 class="card-title bcdl-osc"><?php echo $featurecaption05; ?></h3>
             <hr class="bg-white bcdl-hoverup">
@@ -125,7 +125,7 @@
         <div class="card bcdl-mask-contain text-white">
           <a class="stretched-link bcdl-masked-link rounded" href="<?php echo esc_url(get_category_link($bcdlfeaturecat06)); ?>" style="background-image: url('<?php echo wp_get_attachment_url( $feature6Id ) ?>');">
           </a>
-          <div class="bcdl-mask bcdl-purple rounded"></div>
+          <div class="bcdl-mask bcdl-blue rounded"></div>
           <div class="card-img-overlay">
             <h3 class="card-title bcdl-osc"><?php echo $featurecaption06; ?></h3>
             <hr class="bg-white bcdl-hoverup">
