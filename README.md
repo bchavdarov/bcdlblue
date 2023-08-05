@@ -38,10 +38,6 @@ $ npm install
 
 `BCDLblue` comes packed with CLI commands tailored for WordPress theme development:
 
-- `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
-- `composer lint:php` : checks all PHP files for syntax errors.
-- `composer make-pot` : generates a .pot file in the `languages/` directory.
-- `wp i18n make-pot . languages/bcdlblue.pot` : another way to make .pot file in `languages/` directory (requires [wp-cli](https://make.wordpress.org/cli/handbook/guides/installing/) installed)
 - `npm run bcdlcss` : compiles SASS files to css.
 - `npm run bcdlwatch` : watches SASS files and when changed compiles them to CSS. Can be used instead of `npm run bcdlcss`. Use `CTRL+C` to stop watching.
 - `npm run bcdljs` : compiles JavaScript files to js.
@@ -49,6 +45,7 @@ $ npm install
 - `npm run lint:scss` : checks all SASS files against [CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
 - `npm run lint:js` : checks all JavaScript files against [JavaScript Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/javascript/).
 - `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
+- `wp i18n make-pot . languages/bcdlblue.pot` : another way to make .pot file in `languages/` directory (requires [wp-cli](https://make.wordpress.org/cli/handbook/guides/installing/) installed).
 
 Now you're ready to go! The next step is easy to say, but harder to do: Make a beautiful WordPress theme. :blue_heart:
 :thumbsup:
