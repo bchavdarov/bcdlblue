@@ -21,8 +21,8 @@
     "@wordpress/scripts": "^26.9.0",
     "bootstrap": "^5.3.1",
     "dir-archiver": "^2.1.0",
-    "node-sass": "^9.0.0",
     "rtlcss": "^4.1.0",
+    "sass": "^1.64.2",
     "uglify-js": "^3.17.4"
   },
   "rtlcssConfig": {
@@ -39,10 +39,9 @@
     "map": false
   },
   "scripts": {
-    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "bcdlcss": "node-sass sass/theme.scss bcdlcss/theme.css --output-style compressed && node-sass sass/woocommerce.scss bcdlcss/woocommerce.css --output-style compressed",
+    "bcdlcss": "sass sass/theme.scss bcdlcss/theme.css --style=compressed && sass sass/woocommerce.scss bcdlcss/woocommerce.css --style=compressed",
+    "bcdlwatch": "sass --watch sass/theme.scss bcdlcss/theme.css --style=compressed && sass sass/woocommerce.scss bcdlcss/woocommerce.css --style=compressed",
     "bcdljs": "uglifyjs node_modules/bootstrap/dist/js/bootstrap.bundle.js -c -m -o js/theme.min.js",
-    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
     "lint:js": "wp-scripts lint-js 'js/*.js'",
