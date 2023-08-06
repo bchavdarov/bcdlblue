@@ -1,7 +1,10 @@
 /*The custom styles go in _custom.scss*/
 
+/*Import custom variables*/
+@import "variables";
+
 /*Import Bootstrap sass files*/
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 /*Import custom sass*/
 @import "custom";
