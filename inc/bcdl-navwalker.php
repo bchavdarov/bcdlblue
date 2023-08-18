@@ -11,13 +11,11 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
     
     function start_lvl(&$output, $depth=0, $args=null) {
       $bcdl_ulclass = '';
-      //$bcdl_ulclass = ( $depth == 0 ) ? $args->menu_class : 'dropdown-menu' ;
       $bcdl_ulclass = ( $depth === 0 ) ? 'dropdown-menu bcdldropdown-menu' : 'dropdown-menu flss' ;
       $output .= '<ul class="' . $bcdl_ulclass . '">';
     }
 
-    //function end_lvl(&$output, $depth=0, $args=null) {}
-
+    
     function start_el(&$output, $item, $depth=0, $args=null, $id=0) {
 
       $bcdl_aclass ='';
