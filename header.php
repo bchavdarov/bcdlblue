@@ -35,14 +35,13 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
-	<div id="wrapper-navbar">
+	<div class="navbarwrap" id="navbarwrapper"> <!-- the navbar wrapper -->
+		<!--
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bcdlblue' ); ?></a>
-
-		<header id="masthead" class="site-header">
-
+		-->
 
 		<!-- BCDL_Blue_Navwalker -->
-		<nav id="bcdl-main-navigation" class="main-navigation navbar navbar-expand-md navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg">
 			<div class="container-fluid">
 			<div class="site-branding">
 				<?php
@@ -64,10 +63,11 @@
 			</div><!-- .site-branding -->
 
 
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bcdl-navbar-menu" aria-controls="bcdl-navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
-	      <span class="navbar-toggler-icon"></span>
-	    </button>
-		    <div id="bcdl-navbar-menu" class="collapse navbar-collapse">
+			<a class="navbar-brand" href="#">Brand</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bcdlnavbarcontent" aria-controls="bcdlnavbarcontent" aria-expanded="false" aria-label="Toggle navigation">
+            	<span class="navbar-toggler-icon"></span>
+          	</button>
+			<div class="collapse navbar-collapse" id="bcdlnavbarcontent">
 				<?php
 				wp_nav_menu( [
 							'theme_location'    => 'primary',
@@ -87,7 +87,7 @@
 		        		<img src="<?php echo esc_url( get_template_directory_uri() . '/images/globe.svg' ) ?>" style="height: 1.4em">
 								<span class="bcdl-osc" style="line-height:100%">EN</span>
 							</span>
-		        </a>
+		        	</a>
 		        <?php else://elseif is main site ========================================= ?>
 		        	<a class="clearlink text-decoration-none" href="<?php echo $base; ?>">
 		        	<span class="text-secondary bg-light bcdl-os">
@@ -97,9 +97,9 @@
 			        </a>
 		        <?php endif;//endif is main site =========================================?>
 	        
-	      	<?php endif; //multisite check ?>
+	      		<?php endif; //multisite check ?>
 
-	      	<button id="bcdl-search" type="button" class="btn btn-outline-secondary mx-3" data-bs-toggle="modal" data-bs-target="#bcdlsearchmodal">
+					<button id="bcdl-search" type="button" class="btn btn-outline-secondary mx-3" data-bs-toggle="modal" data-bs-target="#bcdlsearchmodal">
 						<svg id="i-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="18" height="18" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
 								<circle cx="14" cy="14" r="12" />
 								<path d="M23 23 L30 30"  />
@@ -111,8 +111,6 @@
 		</nav>
 		<!-- end of BCDL_Blue_Navwalker -->
 
-		
-		</header><!-- #masthead -->
 	</div> <!-- the navbar wrapper -->
 
 	<!-- Modal -->
