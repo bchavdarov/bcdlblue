@@ -15,7 +15,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#a020f0">
+	<meta name="theme-color" content="#0888f3">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<style>
 		.bcdldropdown:hover .bcdldropdown-menu {
@@ -109,10 +109,11 @@
 				</div>
 			</div>
 		</nav>
+		
 		<!-- end of BCDL_Blue_Navwalker -->
 
 	</div> <!-- the navbar wrapper -->
-
+	<div class="bcdl-dropdown-overlay"></div>
 	<!-- Modal -->
 	<div class="modal fade" id="bcdlsearchmodal" data-bs-backdrop="true" data-bs-keyboard="true" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-centered modal-xl">

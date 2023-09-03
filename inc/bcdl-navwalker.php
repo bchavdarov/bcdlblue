@@ -11,6 +11,8 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
     
     private $has_mm = false; // Initialize the flag
 
+    private $mmtabs = array(); // Initialize the menu items array
+
     // Start a new level of the menu
     function start_lvl(&$output, $depth = 0, $args = null) {
       $classes = array();
@@ -48,7 +50,35 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
       $output .= '</ul>';
       
       if ( $depth === 0 && $this->has_mm ) {
-        $output .= '</div> <!-- the big menu itself -->'; // Close the full width menu div
+        $output .= '<!-- the tabs code here -->';
+        $output .= '<div class="tab-content" id="bcdlTabContent">';
+        $output .= '<!-- the tab panes code here: traverse the mmtabs array and output the tabs -->';
+        if (!empty($this->mmtabs)) {
+          // $mmtabs array has values
+          foreach ($this->mmtabs as $i => $tab) {
+            if ( $i === 0 ) {
+              $output .= '<div class="tab-pane fade show active" id="tab';  
+            } else {
+              $output .= '<div class="tab-pane fade" id="tab';
+            }
+            $output .= $tab;
+            $output .= '-pane" role="tabpanel" aria-labelledby="tab';
+            $output .= $tab;
+            $output .= '" tabindex="0">'; 
+            //populate the tab pane here
+            //$output .= '<p>The cards content goes here: '.$tab.'</p>';
+            $output .= $this->bcdl_populate_products($tab);
+            $output .= '</div>';
+          }
+        } else {
+          // $mmtabs array is empty
+          $output .= '<!-- array empty -->';
+        }
+        
+        $output .= '</div>';
+
+        $output .= '</div> <!-- the big menu itself -->'; 
+        
       }
       
       if($depth === 1 && $this->has_mm) {
@@ -104,23 +134,28 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
 
       // Generate the list item element
       if ($depth === 1 && $this->has_mm) {
+        $this->mmtabs[] = $item->ID; // Add the menu item to the tabs array
         $output .= '<li class="' . esc_attr( implode( ' ', $classes ) ) . '" role="presentation">';
-        $output .= '<button class="nav-link bcdl-tab active" id="tab';
+        if ( count($this->mmtabs) === 1 ) {
+          $output .= '<button class="nav-link bcdl-tab active" id="tab';  
+        } else {
+          $output .= '<button class="nav-link bcdl-tab" id="tab';
+        }
+      
         $output .= $item->ID;
         $output .= '" data-bs-toggle="tab" data-bs-target="#tab';
         $output .= $item->ID;
         $output .= '-pane" type="button" role="tab" aria-controls="tab';
         $output .= $item->ID;
         $output .= '-pane" aria-selected="true">';
-        // The cards rendering code should come here! It would be function render_cards()
       } else {
         $output .= '<li class="' . esc_attr( implode( ' ', $classes ) ) . '">';
       }
 
-      $output .= $this->create_anchors($item, $depth, $has_mm);
+      $output .= $this->create_anchors($item, $depth, $this->has_mm);
       $output .= $item->title;
-      $output .= $this->has_mm;
-      $output .= $depth;
+      //$output .= $this->has_mm;
+      //$output .= $depth;
       $output .= '</a>';
     }
 
@@ -152,7 +187,7 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
 
     function create_anchors($current_item, $current_depth, $mm) {
       $attributes = array(); // Initialize attributes array
-      
+
       if ( $current_depth === 0 ) {
         
         $attributes['class'] = 'nav-link';
@@ -170,6 +205,11 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
         
       }
 
+      if ( $current_depth === 1 && !$mm ) {
+        $attributes['class'] = 'dropdown-item';
+        $attributes['href'] = $current_item->url;
+      }
+
       $attributes_string = '';
     
       foreach ($attributes as $key => $value) {
@@ -180,13 +220,133 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
     
     }
 
-    function bcdl_populate_products($current_item) {
-      //The code for the cards goes here
+    function bcdl_populate_products($current_item_id) {
+      // The code for the cards goes here
+      $theoutput = '';
+      $theoutput .= '<div class="text-center m-3">'. PHP_EOL;
+      $theoutput .= '<div class="row">';
       
+      $category_id = get_post_meta($current_item_id, '_menu_item_object_id', true);
+
+      $subcategories = get_categories(array(
+          'child_of' => $category_id,
+      ));
+
+      if ( isset($subcategories) && !empty($subcategories) ) {
+        foreach ($subcategories as $subcategory) {
+          // Create cards from subcategory
+
+          // Get first post in subcategory
+          $first_post = get_posts(array(
+            'posts_per_page' => 1,
+            'cat' => $subcategory->term_id,
+          ));
+        
+          if ($first_post) {
+            $first_post = $first_post[0];
+            // Get featured image URL
+            $image_url = get_the_post_thumbnail_url($first_post->ID); 
+          }
+
+          // Render the card itself
+          $theoutput .= '<div class="col-6 col-md-3 col-lg-2">';
+          $theoutput .= '<div class="card my-2 bcdlcard border-0">';
+          $theoutput .= '<img src="';
+          $theoutput .= esc_url( $image_url );
+          $theoutput .= '" class="card-img-top img-fluid" alt="...">';
+          $theoutput .= '<div class="card-body">';
+          $theoutput .= '<p class="card-text">';
+          $theoutput .= '<a href="';
+          $theoutput .= esc_url( get_category_link($subcategory->term_id) );
+          $theoutput .= '" class="link-dark stretched-link text-decoration-none">';
+          $theoutput .= $subcategory->name;
+          $theoutput .= '</a>';
+          $theoutput .= '</p>';
+          $theoutput .= '</div>';
+          $theoutput .= '</div>';
+          $theoutput .= '</div>';
+          
+        }
+      } else {
+        //No subcategories, so display
+
+        $subcats = get_categories(array('parent' => $category_id));
+
+        if (isset($category_id)) {
+          
+          if ($subcats) {
+            // Use first subcategory ID
+            $subcat_id = $subcats[0]->term_id;
+            
+            $args = array(
+              'cat' => $subcat_id,
+              'post_type' => 'post',
+              'posts_per_page' => -1
+            );
+          
+          } else {
+          
+            // No subcategories, use main category ID
+            $args = array(
+              'cat' => $category_id,
+              'post_type' => 'post', 
+              'posts_per_page' => -1
+            );
+          
+          }
+
+          /*
+          $args = array(
+              'cat' => $category_id, // Category ID
+              'post_type' => 'post', // Post type
+              'posts_per_page' => -1, // Display all posts from the category
+          );
+          */
+
+          $query = new WP_Query($args);
+
+          // Display posts.
+          if ($query->have_posts()) {
+              while ($query->have_posts()) {
+                  $query->the_post();
+                  // You can customize the post display here.
+                  
+                  $theoutput .= '<div class="col-6 col-md-3 col-lg-2">';
+                  $theoutput .= '<div class="card my-2 bcdlcard border-0">';
+                  $theoutput .= '<img src="';
+                  $theoutput .= esc_url( get_the_post_thumbnail_url() );
+                  $theoutput .= '" class="card-img-top img-fluid" alt="...">';
+                  $theoutput .= '<div class="card-body">';
+                  $theoutput .= '<p class="card-text">';
+                  $theoutput .= '<a href="';
+                  $theoutput .= get_permalink();
+                  $theoutput .= '" class="link-dark stretched-link text-decoration-none">';
+                  $theoutput .= get_the_title();
+                  $theoutput .= '</a>';
+                  $theoutput .= '</p>';
+                  $theoutput .= '</div>';
+                  $theoutput .= '</div>';
+                  $theoutput .= '</div>';
+                  
+              }
+          } else {
+              $theoutput .= 'No posts found.';
+          }
+
+          // Restore the global post data.
+          wp_reset_postdata();
+        }
+
+      }
+      
+
+      
+      $theoutput .= '</div>';
+      $theoutput .= '</div>';
+      return $theoutput;
     }
+  
     
   }
 
 endif;
-
-
