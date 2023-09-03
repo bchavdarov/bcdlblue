@@ -248,6 +248,7 @@ function bcdl_add_scripts() {
 	wp_enqueue_script( 'bcdl-owl-init', get_template_directory_uri() . '/js/owl-init.js', array(), _S_VERSION, true );
 	wp_enqueue_script('ionicons-esm', get_template_directory_uri() . '/js/ionicons.esm.js', '', '', true);
 	wp_enqueue_script('ionicons', get_template_directory_uri() . '/js/ionicons.js', '', '', true);
+	wp_enqueue_script('bcdlmm', get_template_directory_uri() . '/js/mm.js', '', '', true);
 }
 add_action( 'wp_enqueue_scripts', 'bcdl_add_scripts' );
 

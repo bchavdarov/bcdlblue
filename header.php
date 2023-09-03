@@ -130,7 +130,7 @@
 	<?php
 		if ( is_home() || is_front_page() ) :
 			//get_template_part( 'template-parts/section', 'hero' );
-			get_template_part( 'template-parts/section', 'headerclean' );
+			get_template_part( 'template-parts/section', 'carousel' );
 		else :
 			get_template_part( 'template-parts/header', 'archive' );
 		endif;
