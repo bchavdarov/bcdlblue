@@ -23,7 +23,7 @@ if ( is_singular() ) : ?>
 
 <?php else : ?>
 
-	<div class="w-100 h-50 d-flex align-items-center justify-content-center" style="background-image: url('<?php echo get_template_directory_uri() . '/images/background.jpg' ?>'); background-size: cover; background-position: center center;">
+	<div class="w-100 h-50 d-flex align-items-center justify-content-center" style="background-image: url('<?php echo get_template_directory_uri() . '/images/background1.jpg' ?>'); background-size: cover; background-position: center center;">
 		
 		<?php if ( is_singular() ) :
 			the_title( '<h1 class="page-title text-uppercase text-white px-2 bcdl-rob fw-bolder text-center">', '</h1>' );
