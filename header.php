@@ -83,7 +83,7 @@
 						if ( is_main_site() ): //if is main site?>
 		        
 		        	<a class="clearlink text-decoration-none" href="<?php echo $base.'/en'; ?>">
-		        	<span class="text-secondary bg-light bcdl-os">
+		        	<span class="text-secondary bcdl-os">
 		        		<img src="<?php echo esc_url( get_template_directory_uri() . '/images/globe.svg' ) ?>" style="height: 1.4em">
 								<span class="bcdl-osc" style="line-height:100%">EN</span>
 							</span>
@@ -129,8 +129,8 @@
 
 	<?php
 		if ( is_home() || is_front_page() ) :
-			//get_template_part( 'template-parts/section', 'hero' );
-			get_template_part( 'template-parts/section', 'carouselbcdlhero' );
+			get_template_part( 'template-parts/section', 'headerclean' );
+			//get_template_part( 'template-parts/section', 'carouselbcdlhero' );
 		else :
 			get_template_part( 'template-parts/header', 'archive' );
 		endif;
