@@ -17,7 +17,11 @@ $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 
 if ( is_singular() ) : ?>
 
-	<div class="w-100 h-50 d-flex align-items-center justify-content-center" style="background-image: url('<?php echo esc_url( $thumb_url[0] ) ?>'); background-size: cover; background-position: center center;">
+	<?php 
+		//This code displays the featured image of the post
+		//echo esc_url( $thumb_url[0] ) 
+	?>
+	<div class="w-100 h-50 d-flex align-items-center justify-content-center" style="background-image: url('<?php echo get_template_directory_uri() . '/images/background.jpg' ?>'); background-size: cover; background-position: center center;">
 		<?php the_title( '<h1 class="page-title text-uppercase text-white px-2 bcdl-rob fw-bolder text-center">', '</h1>' ); ?>
 	</div>
 
