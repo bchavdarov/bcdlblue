@@ -278,3 +278,97 @@ if ( ! function_exists( 'bcdl_get_files' )  ) {
 	}
 }
 
+
+/*
+* BCDL Add featured image to category
+*/ 
+
+// Hook into category edit form
+add_action('category_add_form_fields', 'add_category_image_field');
+add_action('category_edit_form_fields', 'edit_category_image_field');
+
+// Save category image
+add_action('edited_category', 'save_category_image', 10, 2);
+add_action('create_category', 'save_category_image', 10, 2);
+
+// Add custom column to category list table
+add_filter('manage_edit-category_columns', 'add_category_image_column');
+add_filter('manage_category_custom_column', 'display_category_image_column', 10, 3);
+
+// Enqueue the media uploader
+add_action('admin_enqueue_scripts', 'enqueue_category_image_scripts');
+
+// Add image upload field to "Add Category" form
+function add_category_image_field() {
+    ?>
+    <div class="form-field term-group">
+        <label for="category-image-id"><?php _e('Featured Image', 'bcdlblue'); ?></label>
+        <input type="hidden" id="category-image-id" name="category-image-id" class="custom_media_url" value="">
+        <div id="category-image-wrapper"></div>
+        <p>
+            <input type="button" class="button button-secondary category-image-upload" id="category-image-upload" value="<?php _e('Add Image', 'bcdlblue'); ?>" />
+            <input type="button" class="button button-secondary category-image-remove" id="category-image-remove" value="<?php _e('Remove Image', 'bcdlblue'); ?>" />
+        </p>
+    </div>
+    <?php
+}
+
+// Add image upload field to "Edit Category" form
+function edit_category_image_field($term) {
+    $image_id = get_term_meta($term->term_id, 'category-image-id', true); ?>
+    <tr class="form-field term-group-wrap">
+        <th scope="row">
+            <label for="category-image-id"><?php _e('Featured Image', 'bcdlblue'); ?></label>
+        </th>
+        <td>
+            <input type="hidden" id="category-image-id" name="category-image-id" value="<?php echo esc_attr($image_id); ?>">
+            <div id="category-image-wrapper">
+                <?php if ($image_id) { ?>
+                    <?php echo wp_get_attachment_image($image_id, 'thumbnail'); ?>
+                <?php } ?>
+            </div>
+            <p>
+                <input type="button" class="button button-secondary category-image-upload" id="category-image-upload" value="<?php _e('Add Image', 'bcdlblue'); ?>" />
+                <input type="button" class="button button-secondary category-image-remove" id="category-image-remove" value="<?php _e('Remove Image', 'bcdlblue'); ?>" />
+            </p>
+        </td>
+    </tr>
+<?php
+}
+
+// Save category image
+function save_category_image($term_id) {
+    if (isset($_POST['category-image-id']) && '' !== $_POST['category-image-id']) {
+        $image = absint($_POST['category-image-id']);
+        update_term_meta($term_id, 'category-image-id', $image);
+    } else {
+        update_term_meta($term_id, 'category-image-id', '');
+    }
+}
+
+function add_category_image_column($columns) {
+    $columns['category_image'] = __('Featured Image', 'bcdlblue');
+    return $columns;
+}
+
+// Display the category image in the category list table
+function display_category_image_column($columns, $column, $term_id) {
+    if ($column == 'category_image') {
+        $image_id = get_term_meta($term_id, 'category-image-id', true);
+        if ($image_id) {
+            $image = wp_get_attachment_image($image_id, array(50, 50));
+        } else {
+            $image = __('No image', 'bcdlblue');
+        }
+        $columns .= $image;
+    }
+    return $columns;
+}
+
+// Enqueue the media uploader
+function enqueue_category_image_scripts() {
+    if (isset($_GET['taxonomy']) && $_GET['taxonomy'] === 'category') {
+        wp_enqueue_media();
+        wp_enqueue_script('category-image-uploadm', get_template_directory_uri() . '/js/category-image.js', array(), null, true);
+    }
+}
