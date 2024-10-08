@@ -372,3 +372,13 @@ function enqueue_category_image_scripts() {
         wp_enqueue_script('category-image-uploadm', get_template_directory_uri() . '/js/category-image.js', array(), null, true);
     }
 }
+
+// Get the category featured image URL
+function get_category_featured_image_url($term_id) {
+    $image_id = get_term_meta($term_id, 'category-image-id', true);
+    if ($image_id) {
+        $image_url = wp_get_attachment_image_url($image_id, 'full');
+        return $image_url;
+    }
+    return false;
+}
