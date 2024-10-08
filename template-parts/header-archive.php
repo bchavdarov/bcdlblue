@@ -15,25 +15,30 @@ $thumb_id = get_post_thumbnail_id();
 //$thumb_url = wp_get_attachment_url( $thumb_id );
 $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 
+/**
+ * Retrieves the categories associated with the current post.
+ *
+ * This code retrieves the categories associated with the current post and stores them in the `$category` variable.
+ */
 
- //This code retrieves the categories associated with the current post and stores them in the `$category` variable.
- $category = get_the_category();
-if (!empty($category)) {
-    $category_id = $category[0]->cat_ID;
-    // Now you have the category ID stored in $category_id
-}
 
-$category_image_url = get_category_featured_image_url($category_id);
+if ( is_singular() ) : 
 
-if ( is_singular() ) : ?>
-
-	<?php 
-		//This code displays the featured image of the post
-		//echo esc_url( $thumb_url[0] ) 
+		$the_url_string = '';
+		if ( is_single() ) {
+			$category = get_the_category();
+			if (!empty($category)) {
+				$category_id = $category[0]->cat_ID;
+				// Now you have the category ID stored in $category_id
+			}
+			$category_image_url = get_category_featured_image_url($category_id);
+			$the_url_string = $category_image_url;
+		} else {
+			$the_url_string = $thumb_url[0];
+		}
 	?>
-	
 
-	<div class="w-100 h-50 d-flex align-items-center justify-content-center" style="background-image: url('<?php echo esc_url( $category_image_url ) ?>'); background-size: cover; background-position: center center;">
+	<div class="w-100 h-50 d-flex align-items-center justify-content-center" style="background-image: url('<?php echo esc_url( $the_url_string ) ?>'); background-size: cover; background-position: center center;">
 		<?php the_title( '<h1 class="page-title text-uppercase text-white px-2 bcdl-rob fw-bolder text-center">', '</h1>' ); ?>
 	</div>
 
