@@ -137,9 +137,9 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
         $this->mmtabs[] = $item->ID; // Add the menu item to the tabs array
         $output .= '<li class="' . esc_attr( implode( ' ', $classes ) ) . '" role="presentation">';
         if ( count($this->mmtabs) === 1 ) {
-          $output .= '<button class="nav-link bcdl-tab active" id="tab';  
+          $output .= '<button class="nav-link px-2 bcdl-tab active" id="tab';  
         } else {
-          $output .= '<button class="nav-link bcdl-tab" id="tab';
+          $output .= '<button class="nav-link px-2 bcdl-tab" id="tab';
         }
       
         $output .= $item->ID;
