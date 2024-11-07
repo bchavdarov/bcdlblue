@@ -1,0 +1,422 @@
+# Copyright (C) 2024 Boncho Chavdarov
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: BCDLblue 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bcdlblue\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-11-06T19:10:22+00:00\n"
+"PO-Revision-Date: 2024-11-07 19:05+0200\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Domain: bcdlblue\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: bg_BG\n"
+
+#. Theme Name of the theme
+msgid "BCDLblue"
+msgstr "BCDLblue"
+
+#. Theme URI of the theme
+msgid "https://github.com/bchavdarov/bcdlblue"
+msgstr "https://github.com/bchavdarov/bcdlblue"
+
+#. Description of the theme
+msgid "BCDL Blue theme based on Underscores and Bootstrap"
+msgstr "BCDL Blue тема, базирана на Underscores и Bootstrap"
+
+#. Author of the theme
+msgid "Boncho Chavdarov"
+msgstr "Бончо Чавдаров"
+
+#. Author URI of the theme
+msgid "https://bchavdarov.github.io/bcdlab/"
+msgstr "https://bchavdarov.github.io/bcdlab/"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Опа! Тази страница не може да бъде намерена."
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Изглежда, че нищо не е намерено на този адрес. Можете да опитате една от "
+"връзките по-долу или търсене."
+
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "Най-използвани категории"
+
+#. translators: %1$s: smiley
+#: 404.php:48
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Опитайте да погледнете в месечните архиви. %1$s"
+
+#. translators: 1: title.
+#: comments.php:35
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "Една мисъл за &ldquo;%1$s&rdquo;"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:41
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Една мисъл за &ldquo;%1$s&rdquo;"
+msgstr[1] "Една мисъл за &ldquo;%1$s&rdquo;"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "Коментарите са затворени."
+
+#. translators: 1: Theme name, 2: Theme author.
+#: footer.php:21
+msgid "Theme: %1$s by %2$s."
+msgstr "Тема: %1$s by %2$s."
+
+#: functions.php:55
+msgid "Primary Menu"
+msgstr "Главно меню"
+
+#: functions.php:129
+msgid "Sidebar"
+msgstr "Странична лента"
+
+#: functions.php:131 functions.php:143 functions.php:155 functions.php:167
+msgid "Add widgets here."
+msgstr "Добавете модули тук."
+
+#: functions.php:141
+msgid "BCDLFooterMap"
+msgstr "BCDLFooterMap"
+
+#: functions.php:153
+msgid "BCDLFooterWidget1"
+msgstr "BCDLFooterWidget1"
+
+#: functions.php:165
+msgid "BCDLFooterWidget2"
+msgstr "BCDLFooterWidget2"
+
+#: functions.php:305 functions.php:321 functions.php:350
+msgid "Featured Image"
+msgstr "Представително изображение"
+
+#: functions.php:309 functions.php:331
+msgid "Add Image"
+msgstr "Добавяне на изображение"
+
+#: functions.php:310 functions.php:332
+msgid "Remove Image"
+msgstr "Премахване на изображение"
+
+#: functions.php:361
+msgid "No image"
+msgstr "Няма изображение"
+
+#: header.php:40
+msgid "Skip to content"
+msgstr "Преминете към съдържанието"
+
+#: inc/bcdl-featuredcategories.php:7
+msgid "Featured categories grid"
+msgstr "Мрежа с избрани категории"
+
+#: inc/bcdl-featuredcategories.php:8
+msgid "Select images for featured grid cards"
+msgstr "Изберете изображения за избраните категории"
+
+#: inc/bcdl-featuredcategories.php:27 inc/bcdl-featuredposts.php:27
+#: inc/bcdl-footersection.php:24
+msgid "Type section title"
+msgstr "Въведете заглавие на раздел"
+
+#: inc/bcdl-featuredcategories.php:47 inc/bcdl-featuredposts.php:47
+msgid "Type section subtitle"
+msgstr "Въведете подзаглавие на раздел"
+
+#: inc/bcdl-featuredcategories.php:66
+msgid "Feature 1 caption"
+msgstr "Избор 1 заглавие"
+
+#: inc/bcdl-featuredcategories.php:86
+msgid "Feature 1 subcaption"
+msgstr "Избор 1 подзаглавие"
+
+#: inc/bcdl-featuredcategories.php:104
+msgid "Select Feature 1 image"
+msgstr "Избор 1 изображение"
+
+#: inc/bcdl-featuredcategories.php:120
+msgid "Feature 1 category"
+msgstr "Избор 1 категория"
+
+#: inc/bcdl-featuredcategories.php:121
+msgid "Select feature 1 category"
+msgstr "Избор на Избрана категория 1"
+
+#: inc/bcdl-featuredcategories.php:139
+msgid "Feature 2 caption"
+msgstr "Избор 2 заглавие"
+
+#: inc/bcdl-featuredcategories.php:159
+msgid "Feature 2 subcaption"
+msgstr "Избор 2 подзаглавие"
+
+#: inc/bcdl-featuredcategories.php:177
+msgid "Select Feature 2 image"
+msgstr "Избор 2 изображение"
+
+#: inc/bcdl-featuredcategories.php:193
+msgid "Feature 2 category"
+msgstr "Избор 2 категория"
+
+#: inc/bcdl-featuredcategories.php:194
+msgid "Select feature 2 category"
+msgstr "Избор на Избрана категория 2"
+
+#: inc/bcdl-featuredcategories.php:212
+msgid "Feature 3 caption"
+msgstr "Избор 3 заглавие"
+
+#: inc/bcdl-featuredcategories.php:231
+msgid "Feature 3 subcaption"
+msgstr "Избор 3 подзаглавие"
+
+#: inc/bcdl-featuredcategories.php:249
+msgid "Select Feature 3 image"
+msgstr "Избор 3 изображение"
+
+#: inc/bcdl-featuredcategories.php:265
+msgid "Feature 3 category"
+msgstr "Избор 3 категория"
+
+#: inc/bcdl-featuredcategories.php:266
+msgid "Select feature 3 category"
+msgstr "Избор на Избрана категория 3"
+
+#: inc/bcdl-featuredcategories.php:284
+msgid "Feature 4 caption"
+msgstr "Избор 4 заглавие"
+
+#: inc/bcdl-featuredcategories.php:303
+msgid "Featrure 4 subcaption"
+msgstr "Избор 4 подзаглавие"
+
+#: inc/bcdl-featuredcategories.php:321
+msgid "Select Feature 4 image"
+msgstr "Избор 4 изображение"
+
+#: inc/bcdl-featuredcategories.php:337
+msgid "Feature 4 category"
+msgstr "Избор 4 категория"
+
+#: inc/bcdl-featuredcategories.php:338
+msgid "Select feature 4 category"
+msgstr "Избор на Избрана категория 4"
+
+#: inc/bcdl-featuredcategories.php:356
+msgid "Feature 5 caption"
+msgstr "Избор 5 заглавие"
+
+#: inc/bcdl-featuredcategories.php:375
+msgid "Feature 5 subcaption"
+msgstr "Избор 5 подзаглавие"
+
+#: inc/bcdl-featuredcategories.php:393
+msgid "Select Feature 5 image"
+msgstr "Избор 5 изображение"
+
+#: inc/bcdl-featuredcategories.php:409
+msgid "Feature 5 category"
+msgstr "Избор 5 категория"
+
+#: inc/bcdl-featuredcategories.php:410
+msgid "Select feature 5 category"
+msgstr "Избор на Избрана категория 5"
+
+#: inc/bcdl-featuredcategories.php:428
+msgid "Feature 6 caption"
+msgstr "Избор 6 заглавие"
+
+#: inc/bcdl-featuredcategories.php:447
+msgid "Feature 6 subcaption"
+msgstr "Избор 6 подзаглавие"
+
+#: inc/bcdl-featuredcategories.php:465
+msgid "Select Feature 6 image"
+msgstr "Избор 6 изображение"
+
+#: inc/bcdl-featuredcategories.php:481
+msgid "Feature 6 category"
+msgstr "Избор 6 категория"
+
+#: inc/bcdl-featuredcategories.php:482
+msgid "Select feature 6 category"
+msgstr "Избор на Избрана категория 6"
+
+#: inc/bcdl-featuredpage.php:6
+msgid "Featured page"
+msgstr "Избрана страница"
+
+#: inc/bcdl-featuredpage.php:7
+msgid "Select featured page to display"
+msgstr "Изберете главна страница за начало"
+
+#: inc/bcdl-featuredpage.php:45 inc/bcdl-footersection.php:42
+msgid "Type content here"
+msgstr "Въведете съдържание тук"
+
+#: inc/bcdl-featuredposts.php:7
+msgid "Featured posts grid"
+msgstr "Мрежа от избрани публикации"
+
+#: inc/bcdl-featuredposts.php:8
+msgid "Select featured posts"
+msgstr "Изберете избрани публикации"
+
+#: inc/bcdl-featuredposts.php:60
+msgid "Featured posts category"
+msgstr "Категория на избрани публикации"
+
+#: inc/bcdl-featuredposts.php:61
+msgid "Select featured posts category"
+msgstr "Изберете категорията на избраната публикация"
+
+#: inc/bcdl-featuredposts.php:119
+msgid "Featured post "
+msgstr "Избрана публикация "
+
+#: inc/bcdl-featuredposts.php:141
+msgid "Choose svg file "
+msgstr "Изберете SVG файл "
+
+#: inc/bcdl-footersection.php:5
+msgid "Footer"
+msgstr "Колонтитул"
+
+#: inc/bcdl-footersection.php:6
+msgid "Footer section settings"
+msgstr "Настройка на секция колонтитул"
+
+#: inc/bcdl-headerclean.php:31
+msgid "Select Header image"
+msgstr "Изберете заглавно изображение"
+
+#. translators: %s: post date.
+#: inc/template-tags.php:30
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "Публикуван на %s"
+
+#. translators: %s: post author.
+#: inc/template-tags.php:46
+msgctxt "post author"
+msgid "by %s"
+msgstr "от %s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:63
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of categories.
+#: inc/template-tags.php:66
+msgid "Posted in %1$s"
+msgstr "Публикуван в %1$s"
+
+#. translators: used between list items, there is a space after the comma
+#: inc/template-tags.php:70
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of tags.
+#: inc/template-tags.php:73
+msgid "Tagged %1$s"
+msgstr "Маркиран %1$s"
+
+#. translators: %s: post title
+#: inc/template-tags.php:83
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "Оставете коментар<span class=\"screen-reader-text\"> на %s</span>"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: inc/template-tags.php:100 template-parts/content-page.php:40
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "Редакция <span class=\"screen-reader-text\">%s</span>"
+
+#: inc/woocommerce.php:184
+msgid "View your shopping cart"
+msgstr "Вижте пазарската си количка"
+
+#. translators: number of items in the mini cart.
+#: inc/woocommerce.php:188
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "елемент"
+msgstr[1] "елементи"
+
+#. translators: %s: search query.
+#: search.php:22 template-parts/header-archive.php:53
+msgid "Search Results for: %s"
+msgstr "Резултати от търсенето за: %s"
+
+#: single.php:24
+msgid "Previous:"
+msgstr "Предходен:"
+
+#: single.php:25
+msgid "Next:"
+msgstr "Следващ:"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Нищо не е намерено"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:24
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готови ли сте да направите първата си публикация? <a href=\"%1$s\">Започнете "
+"тук</a>."
+
+#: template-parts/content-none.php:37
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Съжаляваме, но нищо не съответства на вашите критерии за търсене. Моля, "
+"опитайте отново с различни ключови думи."
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Изглежда, че не можем да намерим това, което търсите. Може би търсене може "
+"да помогне."
+
+#: template-parts/content-page.php:26 template-parts/content-post.php:59
+#: template-parts/content.php:53
+msgid "Pages:"
+msgstr "Страници:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-post.php:46 template-parts/content.php:40
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "Продължете четенето<span class=\"screen-reader-text\"> \"%s\"</span>"
+
+#: template-parts/section-footer.php:22
+msgid "Our location"
+msgstr "Къде да ни намерите"
+
+#: template-parts/section-footer.php:71
+msgid "All rights reserved"
+msgstr "Всички права запазени"
