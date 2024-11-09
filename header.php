@@ -62,8 +62,10 @@
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
+			<?php if ( ! has_custom_logo() ) : ?>
+				<a class="navbar-brand" href="<?php echo esc_url( get_site_url() ); ?>">Brand</a>
+			<?php endif; ?>
 
-			<a class="navbar-brand" href="<?php echo esc_url( get_site_url() ); ?>">Brand</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bcdlnavbarcontent" aria-controls="bcdlnavbarcontent" aria-expanded="false" aria-label="Toggle navigation">
             	<span class="navbar-toggler-icon"></span>
           	</button>
