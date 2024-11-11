@@ -35,7 +35,7 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
-	<div class="navbarwrap border-bottom border-dark" id="navbarwrapper"> <!-- the navbar wrapper -->
+	<div class="navbarwrap" id="navbarwrapper"> <!-- the navbar wrapper -->
 		<!--
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bcdlblue' ); ?></a>
 		-->
