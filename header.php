@@ -84,7 +84,7 @@
 					$base = network_site_url(); 
 						if ( is_main_site() ): //if is main site?>
 		        
-		        	<a class="clearlink text-decoration-none" href="<?php echo $base.'/en'; ?>">
+		        	<a class="clearlink text-decoration-none" href="<?php echo $base.'en'; ?>">
 		        	<span class="text-secondary bcdl-os">
 		        		<img src="<?php echo esc_url( get_template_directory_uri() . '/images/globe2.svg' ) ?>" style="height: 1.4em">
 								<span class="bcdl-osc" style="line-height:100%">EN</span>
