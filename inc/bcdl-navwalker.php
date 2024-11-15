@@ -139,7 +139,7 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
           // Use $item->title directly instead of wrapping in <a>
           $output .= esc_html($item->title);
   
-          $output .= '</button>';
+          //$output .= '</button>';
       } else {
           // Add anchor link
           $output .= $this->create_anchors($item, $depth, $this->has_mm);
