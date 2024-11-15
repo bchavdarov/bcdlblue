@@ -93,71 +93,61 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
       $this->has_mm = $this->has_mm || ($item->url === '#mm');
       if ( $this->has_mm_link_in_parents($item->menu_item_parent) ) {
-        $this->has_mm = true;
+          $this->has_mm = true;
       }
-      
+  
       // The output of the menu item
       $classes = empty( $item->classes ) ? array() : (array) $item->classes;
-      
-      // Add your custom classes here
+  
       if ($depth === 0) {
-        $li_classes = array (
-          'nav-item',
-          'mainmnu'
-        );
-
-        if ( $this->has_mm ) {
-          $li_classes[] = 'megadrop'; 
-        }
-
-    
-        if ($this->has_children || $this->has_mm ) {
-          $li_classes[] = 'dropdown';
-        }
-
+          $li_classes = array (
+              'nav-item',
+              'mainmnu'
+          );
+  
+          if ( $this->has_mm ) {
+              $li_classes[] = 'megadrop'; 
+          }
+  
+          if ($this->has_children || $this->has_mm ) {
+              $li_classes[] = 'dropdown';
+          }
+  
+      } elseif ($depth === 1) { 
+          $li_classes = array (
+              'nav-item'
+          );
+      } else {
+          $li_classes = array (
+              ''
+          );
       }
-    
-      if ($depth === 1) { 
-        $li_classes = array (
-          'nav-item'
-        );
-      }
-    
-      if ($depth > 1) {
-        $li_classes = array (
-          ''
-        );
-      }
-
+  
       // Apply any filters to modify the classes
       $classes = apply_filters( 'nav_menu_css_class', $li_classes, $item, $args, $depth );
-
-      // Generate the list item element
+  
+      // Start list item
+      $output .= '<li class="' . esc_attr( implode( ' ', $classes ) ) . '">';
+  
       if ($depth === 1 && $this->has_mm) {
-        $this->mmtabs[] = $item->ID; // Add the menu item to the tabs array
-        $output .= '<li class="' . esc_attr( implode( ' ', $classes ) ) . '" role="presentation">';
-        if ( count($this->mmtabs) === 1 ) {
-          $output .= '<button class="nav-link px-2 bcdl-tab active" id="tab';  
-        } else {
-          $output .= '<button class="nav-link px-2 bcdl-tab" id="tab';
-        }
-      
-        $output .= $item->ID;
-        $output .= '" data-bs-toggle="tab" data-bs-target="#tab';
-        $output .= $item->ID;
-        $output .= '-pane" type="button" role="tab" aria-controls="tab';
-        $output .= $item->ID;
-        $output .= '-pane" aria-selected="true">';
+          $this->mmtabs[] = $item->ID; // Add the menu item to the tabs array
+  
+          $output .= '<button class="nav-link px-2 bcdl-tab';
+          $output .= count($this->mmtabs) === 1 ? ' active' : '';
+          $output .= '" id="tab' . $item->ID . '" data-bs-toggle="tab" data-bs-target="#tab' . $item->ID . '-pane" type="button" role="tab" aria-controls="tab' . $item->ID . '-pane" aria-selected="true">';
+          
+          // Use $item->title directly instead of wrapping in <a>
+          $output .= esc_html($item->title);
+  
+          $output .= '</button>';
       } else {
-        $output .= '<li class="' . esc_attr( implode( ' ', $classes ) ) . '">';
+          // Add anchor link
+          $output .= $this->create_anchors($item, $depth, $this->has_mm);
+          $output .= esc_html($item->title);
+          $output .= '</a>';
       }
-
-      $output .= $this->create_anchors($item, $depth, $this->has_mm);
-      $output .= $item->title;
-      //$output .= $this->has_mm;
-      //$output .= $depth;
-      $output .= '</a>';
-    }
+  }
+  
 
     // End rendering a menu item
     function end_el(&$output, $item, $depth = 0, $args = null) {
