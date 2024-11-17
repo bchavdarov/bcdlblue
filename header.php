@@ -92,7 +92,7 @@
 		        	</a>
 		        <?php else://elseif is main site ========================================= ?>
 		        	<a class="clearlink text-decoration-none" href="<?php echo $base; ?>">
-		        	<span class="text-secondary bg-light bcdl-os">
+		        	<span class="text-secondary bcdl-os">
 		        		<img src="<?php echo esc_url( get_template_directory_uri() . '/images/globe2.svg' ) ?>" style="height: 1.4em">
 								<span class="bcdl-osc" style="line-height:100%">BG</span>
 							</span>
