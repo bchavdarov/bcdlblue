@@ -1,6 +1,6 @@
 {
   "name": "bcdlblue",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "A blue theme based on Underscores and Bootstrap.",
   "author": "BCDLab",
   "license": "GPL-2.0-or-later",
@@ -18,12 +18,12 @@
     "url": "https://github.com/bchavdarov/bcdlblue/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^26.9.0",
-    "bootstrap": "^5.3.1",
+    "@wordpress/scripts": "^30.11.0",
+    "bootstrap": "^5.3.3",
     "dir-archiver": "^2.1.0",
-    "rtlcss": "^4.1.0",
-    "sass": "^1.64.2",
-    "uglify-js": "^3.17.4"
+    "rtlcss": "^4.3.0",
+    "sass": "^1.85.1",
+    "uglify-js": "^3.19.3"
   },
   "rtlcssConfig": {
     "options": {
