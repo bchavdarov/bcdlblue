@@ -18,11 +18,11 @@
     "url": "https://github.com/bchavdarov/bcdlblue/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^30.11.0",
-    "bootstrap": "^5.3.3",
+    "@wordpress/scripts": "^30.14.1",
+    "bootstrap": "^5.3.5",
     "dir-archiver": "^2.1.0",
     "rtlcss": "^4.3.0",
-    "sass": "^1.85.1",
+    "sass": "^1.86.3",
     "uglify-js": "^3.19.3"
   },
   "rtlcssConfig": {
