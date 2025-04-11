@@ -1,3 +1,5 @@
+@use "../../abstracts/variables/colors";
+
 body {
-	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	background: colors.$color__background-body; // Fallback for when there is no custom background color defined.
 }

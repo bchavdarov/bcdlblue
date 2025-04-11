@@ -1,3 +1,5 @@
+@use "../../woocommerce";
+
 /**
  * Header cart
  */
@@ -175,19 +177,19 @@ p.stars {
 	text-align: right;
 
 	&.strong {
-		color: $woocommerce__color-success;
+		color: woocommerce.$woocommerce__color-success;
 	}
 
 	&.short {
-		color: $woocommerce__color-error;
+		color: woocommerce.$woocommerce__color-error;
 	}
 
 	&.bad {
-		color: $woocommerce__color-error;
+		color: woocommerce.$woocommerce__color-error;
 	}
 
 	&.good {
-		color: $woocommerce__color-info;
+		color: woocommerce.$woocommerce__color-info;
 	}
 }
 
@@ -199,14 +201,14 @@ p.stars {
 	&.woocommerce-validated {
 
 		input.input-text {
-			box-shadow: inset 2px 0 0 $woocommerce__color-success;
+			box-shadow: inset 2px 0 0 woocommerce.$woocommerce__color-success;
 		}
 	}
 
 	&.woocommerce-invalid {
 
 		input.input-text {
-			box-shadow: inset 2px 0 0 $woocommerce__color-error;
+			box-shadow: inset 2px 0 0 woocommerce.$woocommerce__color-error;
 		}
 	}
 }
@@ -223,18 +225,18 @@ p.stars {
 .woocommerce-error,
 .woocommerce-noreviews,
 p.no-comments {
-	background-color: $woocommerce__color-success;
+	background-color: woocommerce.$woocommerce__color-success;
 	clear: both;
 }
 
 .woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
-	background-color: $woocommerce__color-info;
+	background-color: woocommerce.$woocommerce__color-info;
 }
 
 .woocommerce-error {
-	background-color: $woocommerce__color-error;
+	background-color: woocommerce.$woocommerce__color-error;
 }
 
 .demo_store {
@@ -244,7 +246,7 @@ p.no-comments {
 	right: 0;
 	margin: 0;
 	padding: 1em;
-	background-color: $woocommerce__color-info;
+	background-color: woocommerce.$woocommerce__color-info;
 	z-index: 9999;
 }
 

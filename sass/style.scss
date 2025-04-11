@@ -51,7 +51,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 
 // Import variables and mixins.
-@import "abstracts/abstracts";
+@use "abstracts/abstracts";
 
 /*--------------------------------------------------------------
 # Generic
@@ -59,16 +59,16 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Normalize
 --------------------------------------------- */
-@import "generic/normalize";
+@use "generic/normalize";
 
 /* Box sizing
 --------------------------------------------- */
-@import "generic/box-sizing";
+@use "generic/box-sizing";
 
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-@import "base/base";
+@use "base/base";
 
 /*--------------------------------------------------------------
 # Layouts
@@ -79,7 +79,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-@import "components/components";
+@use "components/components";
 
 /*--------------------------------------------------------------
 # Plugins
@@ -87,7 +87,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Jetpack infinite scroll
 --------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
+@use "plugins/jetpack/infinite-scroll";
 
 /*--------------------------------------------------------------
 # Utilities
@@ -95,8 +95,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 /* Accessibility
 --------------------------------------------- */
-@import "utilities/accessibility";
+@use "utilities/accessibility";
 
 /* Alignments
 --------------------------------------------- */
-@import "utilities/alignments";
+@use "utilities/alignments";
