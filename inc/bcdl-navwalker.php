@@ -92,7 +92,7 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
     // Start rendering a menu item
     function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
       //$this->has_mm = $this->has_mm || ($item->url === '#mm');
-      $this->has_mm = $this->has_mm || (str_starts_with($item->url, '#mm'));
+      $this->has_mm = $this->has_mm || str_starts_with(strtolower($item->url), '#mm');
       if ( $this->has_mm_link_in_parents($item->menu_item_parent) ) {
           $this->has_mm = true;
       }
@@ -169,7 +169,7 @@ if ( ! class_exists( 'BCDL_Blue_Navwalker' ) ) :
         
         // Check if parent URL is "#mm"
         //if ($parent_url === '#mm') {
-        if ( str_starts_with($item->url, '#mm') ) {
+        if ( str_starts_with($parent_url, '#mm')) {
           return true;
         }
       }
