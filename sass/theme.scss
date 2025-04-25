@@ -1,10 +1,13 @@
 /*The custom styles go in _custom.scss*/
 
-/*Import custom variables*/
-@import "variables";
+@use "../node_modules/bootstrap/scss/bootstrap" as bs;
 
-/*Import Bootstrap sass files*/
-@import "../node_modules/bootstrap/scss/bootstrap";
+
+/*Import custom variables*/
+@use "abstracts/abstracts" as abstracts;
 
 /*Import custom sass*/
-@import "custom";
+@use "custom" with (
+  $bcdl-black: bs.$black,
+  $prefix: bs.$prefix
+);

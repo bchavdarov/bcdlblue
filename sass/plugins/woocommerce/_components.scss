@@ -1,8 +1,14 @@
-@use "../../woocommerce";
+//@use "../../woocommerce";
 
 /**
  * Header cart
  */
+
+ // Ensure it uses the necessary variables and mixins from abstracts
+ @use "../../abstracts/variables/colors";
+ @use "../../abstracts/variables/woocommerce-variables" as woocommerce;
+ @use "../../abstracts/abstracts"; // Keep this for other potential uses
+
 .site-header-cart {
 	position: relative;
 	margin: 0;
@@ -57,7 +63,7 @@
 		top: 0;
 		position: absolute;
 		left: 0;
-		color: $color__link;
+		color: colors.$color__link;
 	}
 }
 
@@ -84,7 +90,7 @@ p.stars {
 			line-height: 1;
 			font-family: star;
 			content: "\53";
-			color: $color__text-main;
+			color: colors.$color__text-main;
 			text-indent: 0;
 			opacity: 0.25;
 		}
@@ -93,7 +99,7 @@ p.stars {
 
 			~ a::before {
 				content: "\53";
-				color: $color__text-main;
+				color: colors.$color__text-main;
 				opacity: 0.25;
 			}
 		}
@@ -105,7 +111,7 @@ p.stars {
 
 			&::before {
 				content: "\53";
-				color: $color__link;
+				color: colors.$color__link;
 				opacity: 1;
 			}
 		}
@@ -117,13 +123,13 @@ p.stars {
 
 			&::before {
 				content: "\53";
-				color: $color__link;
+				color: colors.$color__link;
 				opacity: 1;
 			}
 
 			~ a::before {
 				content: "\53";
-				color: $color__text-main;
+				color: colors.$color__text-main;
 				opacity: 0.25;
 			}
 		}
@@ -132,7 +138,7 @@ p.stars {
 
 			&::before {
 				content: "\53";
-				color: $color__link;
+				color: colors.$color__link;
 				opacity: 1;
 			}
 		}

@@ -1,3 +1,6 @@
+@use '../../abstracts/mixins/_mixins.scss' as *;
+@use '../../abstracts/variables/columns' as *;
+
 ul.products {
 	margin: 0;
 	padding: 0;
