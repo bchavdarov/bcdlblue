@@ -31,8 +31,13 @@ if ( is_singular() ) :
 				$category_id = $category[0]->cat_ID;
 				// Now you have the category ID stored in $category_id
 			}
-			$category_image_url = get_category_featured_image_url($category_id);
-			$the_url_string = $category_image_url;
+			if ( isset($category_id) ) {
+				$category_image_url = get_category_featured_image_url($category_id);
+				$the_url_string = $category_image_url;
+			} else {
+				$the_url_string = $thumb_url[0];
+			}
+			
 		} else {
 			$the_url_string = $thumb_url[0];
 		}

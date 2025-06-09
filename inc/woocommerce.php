@@ -42,7 +42,9 @@ add_action( 'after_setup_theme', 'bcdlblue_woocommerce_setup' );
  *
  * @return void
  */
-function bcdlblue_woocommerce_scripts() {
+
+/*
+ function bcdlblue_woocommerce_scripts() {
 	wp_enqueue_style( 'bcdlblue-woocommerce-style', get_template_directory_uri() . '/woocommerce.css', array(), _S_VERSION );
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
@@ -60,6 +62,7 @@ function bcdlblue_woocommerce_scripts() {
 	wp_add_inline_style( 'bcdlblue-woocommerce-style', $inline_font );
 }
 add_action( 'wp_enqueue_scripts', 'bcdlblue_woocommerce_scripts' );
+*/
 
 /**
  * Disable the default WooCommerce stylesheet.
