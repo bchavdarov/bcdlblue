@@ -12,7 +12,7 @@
 <?php
 defined( 'ABSPATH' ) || exit;
 
-get_header( 'shop' );
+get_header();
 ?>
 
 <main id="primary" class="site-main">
@@ -50,4 +50,4 @@ get_header( 'shop' );
 </main>
 
 <?php
-get_footer( 'shop' );
+get_footer();
