@@ -1,7 +1,12 @@
 /*The custom styles go in _custom.scss*/
 
-@use "../node_modules/bootstrap/scss/bootstrap" as bs;
+@use "variables" as vars;
 
+//@use "../node_modules/bootstrap/scss/bootstrap" as bs;
+@use "../node_modules/bootstrap/scss/bootstrap" with (
+  $breadcrumb-divider: vars.$breadcrumb-divider,
+  $blue: vars.$blue
+) as bs;
 
 /*Import custom variables*/
 @use "abstracts/abstracts" as abstracts;

@@ -9,8 +9,8 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<main id="main" class="site-main container py-5">
-    <h3>single product</h3>
+<main id="main" class="site-main container-fluid py-5">
+
     <?php
     while ( have_posts() ) :
         the_post();

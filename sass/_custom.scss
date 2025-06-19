@@ -6,7 +6,7 @@ $my-navbar-color: $bcdl-black;
 
 // Your custom code to be placed here!
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans+Condensed:300|Poiret+One|Tenor+Sans&display=swap&subset=cyrillic,cyrillic-ext');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
@@ -15,10 +15,10 @@ $my-navbar-color: $bcdl-black;
 
 html, body, .site {
 	height: 100%;
-	//font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	//font-family: 'Open Sans Condensed', sans-serif;
 	//font-family: 'Roboto Condensed', sans-serif;
-	font-family: 'Ubuntu', sans-serif;
+	//font-family: 'Ubuntu', sans-serif;
 }
 
 .aheader {
