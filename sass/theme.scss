@@ -1,18 +1,19 @@
 /*The custom styles go in _custom.scss*/
+/*
+@use "variables";
 
-@use "variables" as vars;
+@use "../node_modules/bootstrap/scss/bootstrap" as bs;
 
-//@use "../node_modules/bootstrap/scss/bootstrap" as bs;
-@use "../node_modules/bootstrap/scss/bootstrap" with (
-  $breadcrumb-divider: vars.$breadcrumb-divider,
-  $blue: vars.$blue
-) as bs;
+@use "custom";  
+*/
 
+// your custom styles override Bootstrap styles
+/*The custom styles go in _custom.scss*/
 /*Import custom variables*/
-@use "abstracts/abstracts" as abstracts;
+@import "variables";
+
+/*Import Bootstrap sass files*/
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 /*Import custom sass*/
-@use "custom" with (
-  $bcdl-black: bs.$black,
-  $prefix: bs.$prefix
-);
+@import "custom";

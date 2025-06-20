@@ -18,11 +18,11 @@
     "url": "https://github.com/bchavdarov/bcdlblue/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^30.14.1",
-    "bootstrap": "^5.3.5",
+    "@wordpress/scripts": "^30.18.0",
+    "bootstrap": "^5.3.7",
     "dir-archiver": "^2.1.0",
     "rtlcss": "^4.3.0",
-    "sass": "^1.86.3",
+    "sass": "^1.89.2",
     "uglify-js": "^3.19.3"
   },
   "rtlcssConfig": {
@@ -39,8 +39,8 @@
     "map": false
   },
   "scripts": {
-    "bcdlcss": "sass sass/theme.scss bcdlcss/theme.css --style=compressed && sass sass/woocommerce.scss bcdlcss/woocommerce.css --style=compressed",
-    "bcdlwatch": "sass --watch sass/theme.scss bcdlcss/theme.css --style=compressed && sass sass/woocommerce.scss bcdlcss/woocommerce.css --style=compressed",
+    "bcdlcss": "npx sass sass/theme.scss bcdlcss/theme.css --style=compressed && npx sass sass/woocommerce.scss bcdlcss/woocommerce.css --style=compressed",
+    "bcdlwatch": "npx sass --watch sass/theme.scss bcdlcss/theme.css --style=compressed && npx sass sass/woocommerce.scss bcdlcss/woocommerce.css --style=compressed",
     "bcdljs": "uglifyjs node_modules/bootstrap/dist/js/bootstrap.bundle.js -c -m -o js/theme.min.js",
     "compile:rtl": "rtlcss style.css style-rtl.css",
     "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",

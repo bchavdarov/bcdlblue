@@ -37,8 +37,9 @@ html, body, .site {
 .clearlink:active, 
 .clearlink:focus,
 .clearlink:visited {
-  outline: 0;
-  -moz-outline-style: none;
+	outline: none;
+  /*outline: 0;
+  -moz-outline-style: none;*/
 }
 
 .bcdl-mask {
