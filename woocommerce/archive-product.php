@@ -16,7 +16,7 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
-  <div class="container-fluid py-5">
+  <div class="container-fluid py-2">
 
     <?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
       <h1 class="page-title woocommerce-products-header__title mb-4">

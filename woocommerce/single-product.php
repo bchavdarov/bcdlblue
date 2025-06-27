@@ -9,7 +9,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-<main id="main" class="site-main container-fluid py-5">
+<main id="main" class="site-main container-fluid">
 
     <?php
     while ( have_posts() ) :
