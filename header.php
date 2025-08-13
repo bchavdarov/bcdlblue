@@ -134,7 +134,7 @@
 			get_template_part( 'template-parts/section', 'headerclean' );
 			//get_template_part( 'template-parts/section', 'carouselbcdlhero' );
 		//elseif ( is_singular( 'product' ) || is_post_type_archive( 'product' ) || is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) :
-		elseif ( is_shop() || is_singular( 'product' ) || is_post_type_archive( 'product' ) || is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) :
+		elseif ( ( function_exists( 'is_shop' ) && is_shop() ) || is_singular( 'product' ) || is_post_type_archive( 'product' ) || is_tax( 'product_cat' ) || is_tax( 'product_tag' ) ) :
 			get_template_part( 'template-parts/header', 'shop' );
 		else :
 			get_template_part( 'template-parts/header', 'archive' );
