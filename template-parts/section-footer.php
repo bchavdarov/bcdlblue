@@ -71,7 +71,7 @@
 					<p class="d-block text-md-left text-center"><?php _e( 'All rights reserved', 'bcdlblue' ); ?>, &copy; <?php echo date("Y"); ?>, <?php echo esc_html( get_bloginfo( 'name' ) ); ?></p>
 				</div>
 				<div class="col-md-4">
-					<p class="d-block text-md-right text-center" style="font-family: 'Open Sans Condensed', sans-serif;"><a href="https://bchavdarov.github.io/bcdlab/" target="_blank">Developed by bchavdarov @ BCDLab</a></p>
+					<p class="d-block text-md-right text-center" style="font-family: 'Open Sans Condensed', sans-serif;"><a href="https://datteq.com" target="_blank"><?php _e( 'Developed by Datteq Ltd - from data to insights', 'bcdlblue' ); ?></a></p>
 				</div>
 			</div>
 		</div>
