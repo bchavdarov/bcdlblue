@@ -1,15 +1,15 @@
-# Copyright (C) 2024 Boncho Chavdarov
+# Copyright (C) 2025 Boncho Chavdarov
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: BCDLblue 2.0.0\n"
+"Project-Id-Version: BCDLblue 3.0.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/bcdlblue\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-11-11T19:17:42+00:00\n"
+"POT-Creation-Date: 2025-10-19T12:45:54+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.7.1\n"
 "X-Domain: bcdlblue\n"
@@ -356,12 +356,12 @@ msgstr ""
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/woocommerce.php:184
+#: inc/woocommerce.php:187
 msgid "View your shopping cart"
 msgstr ""
 
 #. translators: number of items in the mini cart.
-#: inc/woocommerce.php:188
+#: inc/woocommerce.php:191
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
@@ -369,7 +369,7 @@ msgstr[1] ""
 
 #. translators: %s: search query.
 #: search.php:22
-#: template-parts/header-archive.php:53
+#: template-parts/header-archive.php:58
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -420,4 +420,8 @@ msgstr ""
 
 #: template-parts/section-footer.php:71
 msgid "All rights reserved"
+msgstr ""
+
+#: template-parts/section-footer.php:74
+msgid "Developed by Datteq Ltd - from data to insights"
 msgstr ""
