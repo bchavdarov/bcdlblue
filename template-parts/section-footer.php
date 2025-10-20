@@ -19,9 +19,13 @@
 
 				<div class="col-md-6" data-aos="zoom-in-right" data-aos-delay="350" data-aos-anchor-placement="top-bottom">
 
-					<h5 class=""><?php _e( 'Our location', 'bcdlblue' ); ?></h5>
+					<?php
+					//echo '<h5 class="">'; 
+					//_e( 'Our location', 'bcdlblue' ); 
+					//echo '</h5>';
+					?>
 					
-				  <div class="map-responsive" style="overflow:hidden; padding-bottom:70%; position:relative; height:0;">
+				  	<div class="map-responsive" style="overflow:hidden; padding-bottom:70%; position:relative; height:0;">
 
 						<?php if ( is_active_sidebar( 'footermap' ) ) : ?>
 							<div id="footer-widget" class="primary-sidebar widget-area" role="complementary">
