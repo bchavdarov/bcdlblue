@@ -9,6 +9,12 @@
  * @package BCDLblue
  */
 
+if ( is_front_page() && is_home() ) :
+	$site_title = '<h2 class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></h2>';
+else :
+	$site_title = '<p class="site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></p>';
+endif;
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -35,6 +41,12 @@
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 
+		<?php if ( is_active_sidebar( 'headerline' ) ) : ?>
+			<div id="headerline" class="bg-dark widget-area" style="padding: 0; margin: 0;">
+				<?php dynamic_sidebar( 'headerline' ); ?>
+			</div><!-- #primary-sidebar -->
+		<?php endif; ?>
+
 	<div class="navbarwrap border-bottom border-secondary border-opacity-25" id="navbarwrapper"> <!-- the navbar wrapper -->
 		<!--
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'bcdlblue' ); ?></a>
@@ -46,15 +58,9 @@
 			<div class="site-branding">
 				<?php
 				the_custom_logo();
-				if ( is_front_page() && is_home() ) :
-					?>
-					<h2 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h2>
-					<?php
-				else :
-					?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-					<?php
-				endif;
+				
+				echo $site_title;
+
 				$bcdlblue_description = get_bloginfo( 'description', 'display' );
 				if ( $bcdlblue_description || is_customize_preview() ) :
 					?>

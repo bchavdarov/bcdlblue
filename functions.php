@@ -171,6 +171,18 @@ function bcdlblue_widgets_init() {
 			'after_title'   => '</h2>',
 		)
 	);
+
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'BCDLHeaderLine', 'bcdlblue' ),
+			'id'            => 'headerline',
+			'description'   => esc_html__( 'Add widgets here.', 'bcdlblue' ),
+			'before_widget' => '<div class="row">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		)
+	);
 }
 add_action( 'widgets_init', 'bcdlblue_widgets_init' );
 
