@@ -44,7 +44,7 @@ endif;
 		<?php if ( is_active_sidebar( 'headerline' ) ) : ?>
 			<div id="headerline" class="bg-dark widget-area" style="padding: 0; margin: 0;">
 				<?php dynamic_sidebar( 'headerline' ); ?>
-			</div><!-- #primary-sidebar -->
+			</div><!-- #headerline -->
 		<?php endif; ?>
 
 	<div class="navbarwrap border-bottom border-secondary border-opacity-25" id="navbarwrapper"> <!-- the navbar wrapper -->
