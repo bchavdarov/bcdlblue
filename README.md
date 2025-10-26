@@ -47,6 +47,24 @@ $ npm install
 - `npm run bundle` : generates a .zip archive for distribution, excluding development and system files.
 - `wp i18n make-pot . languages/bcdlblue.pot` : another way to make .pot file in `languages/` directory (requires [wp-cli](https://make.wordpress.org/cli/handbook/guides/installing/) installed).
 
+
+# BCDLblue Theme Versioning
+
+BCDLblue uses **Semantic Versioning (SemVer)** for version control. You can update the theme version with npm using the following commands:
+
+```bash
+npm version major -m "fixed issue (%s)"   # for breaking changes or major restructuring
+npm version minor -m "fixed issue (%s)"   # for new features, backward-compatible
+npm version patch -m "fixed issue (%s)"   # for bug fixes or small improvements
+git push && git push --tags               # push commits and tags to GitHub
+```
+%s is automatically replaced with the new version number. Running any of these commands will:
+
+1. Update the version in package.json
+2. Run the version script to update style.css
+3. Create a Git commit with the message and a corresponding tag
+4. Push the commit and tag to GitHub
+
 Now you're ready to go! The next step is easy to say, but harder to do: Make a beautiful WordPress theme. :blue_heart:
 :thumbsup:
 
