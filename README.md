@@ -48,7 +48,7 @@ $ npm install
 - `wp i18n make-pot . languages/bcdlblue.pot` : another way to make .pot file in `languages/` directory (requires [wp-cli](https://make.wordpress.org/cli/handbook/guides/installing/) installed).
 
 
-# BCDLblue Theme Versioning
+### BCDLblue Theme Versioning
 
 BCDLblue uses **Semantic Versioning (SemVer)** for version control. You can update the theme version with npm using the following commands:
 
