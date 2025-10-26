@@ -13,7 +13,7 @@ $headerStl = get_theme_mod( 'bcdl_headerstl' );
 
 ?>
 
-<div class="header h-100" style="background-image: url('<?php echo wp_get_attachment_url( $headerId ) ?>'); background-size: cover;">
+<div class="header h-100" style="background-image: url('<?php echo wp_get_attachment_url( $headerId ) ?>'); background-position: center; background-size: cover;">
 
 	<div class="container h-100">
 		<div class="row h-100 align-items-center justify-content-end">
@@ -21,6 +21,13 @@ $headerStl = get_theme_mod( 'bcdl_headerstl' );
 				<h2 class="pt-4 display-3 bcdl-osc"><?php echo $headerTtl ?></h2>
 				<hr class="">
 				<p class="pb-4 display-6 bcdl-os"><?php echo $headerStl ?></p>
+			</div>
+			<div class="col-md-6 text-white">
+				<?php if ( is_active_sidebar( 'homepgbanner' ) ) : ?>
+					<div id="homepgbanner" class="widget-area" style="padding: 0; margin: 0;">
+						<?php dynamic_sidebar( 'homepgbanner' ); ?>
+					</div><!-- #headerline -->
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
