@@ -58,7 +58,7 @@ npm version minor -m "fixed issue (%s)"   # for new features, backward-compatibl
 npm version patch -m "fixed issue (%s)"   # for bug fixes or small improvements
 git push && git push --tags               # push commits and tags to GitHub
 ```
-%s is automatically replaced with the new version number. Running any of these commands will:
+`%s` is automatically replaced with the new version number. Running any of these commands will:
 
 1. Update the version in package.json
 2. Run the version script to update style.css
