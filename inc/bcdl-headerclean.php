@@ -38,3 +38,31 @@ $wp_customize->add_control( new WP_Customize_Media_Control(
 bcdl_section_titles_add( $wp_customize, 'bcdl-header', 'bcdl_headerttl', 'bcdl_headerttl-ctrl', 'text', 'Section title' );
 
 bcdl_section_titles_add( $wp_customize, 'bcdl-header', 'bcdl_headerstl', 'bcdl_headerstl-ctrl', 'textarea', 'Section subtitle' );
+
+// Color picker (hex)
+$wp_customize->add_setting( 'bcdl_header_bg_color', array(
+    'default'           => '#09255d',
+    'transport'         => 'refresh',
+    'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bcdl_header_bg_color_ctrl', array(
+    'label'    => __( 'Header Column Color', 'bcdlblue' ),
+    'section'  => 'bcdl-header',
+    'settings' => 'bcdl_header_bg_color',
+) ) );
+
+// Alpha/gamma input (0-1)
+$wp_customize->add_setting( 'bcdl_header_bg_alpha', array(
+    'default'           => '0.5',
+    'transport'         => 'refresh',
+    'sanitize_callback' => 'sanitize_text_field',
+) );
+
+$wp_customize->add_control( 'bcdl_header_bg_alpha_ctrl', array(
+    'label'    => __( 'Header Column Transparency (0–1)', 'bcdlblue' ),
+    'section'  => 'bcdl-header',
+    'settings' => 'bcdl_header_bg_alpha',
+    'type'     => 'text', // could also be 'number' or 'range'
+) );
+
