@@ -33,7 +33,7 @@ $bg_color = "rgba($r,$g,$b,$alpha)";
 				<hr class="">
 				<p class="pb-4 display-6 bcdl-os"><?php echo $headerStl ?></p>
 			</div>
-			<div class="col-md-6 text-white">
+			<div class="col-md-6 text-white d-none d-lg-block">
 				<?php if ( is_active_sidebar( 'homepgbanner' ) ) : ?>
 					<div id="homepgbanner" class="widget-area" style="padding: 0; margin: 0;">
 						<?php dynamic_sidebar( 'homepgbanner' ); ?>

@@ -60,7 +60,7 @@ git push && git push --tags               # push commits and tags to GitHub
 ```
 `%s` is automatically replaced with the new version number. Running any of these commands will:
 
-1. Update the version in package.json
+1. Update the version in `package.json`
 2. Run the version script to update style.css
 3. Create a Git commit with the message and a corresponding tag
 4. Push the commit and tag to GitHub
