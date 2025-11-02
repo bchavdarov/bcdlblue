@@ -66,3 +66,15 @@ $wp_customize->add_control( 'bcdl_header_bg_alpha_ctrl', array(
     'type'     => 'text', // could also be 'number' or 'range'
 ) );
 
+// Color picker for the text (hex)
+$wp_customize->add_setting( 'bcdl_header_font_color', array(
+    'default'           => '#fff',
+    'transport'         => 'refresh',
+    'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'bcdl_header_font_color_ctrl', array(
+    'label'    => __( 'Header Column Color', 'bcdlblue' ),
+    'section'  => 'bcdl-header',
+    'settings' => 'bcdl_header_font_color',
+) ) );
