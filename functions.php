@@ -406,3 +406,56 @@ function get_category_featured_image_url($term_id) {
     }
     return false;
 }
+
+// =========================================================
+// Add "Sectioned" checkbox to posts and pages
+// =========================================================
+
+function bcdlblue_add_sectioned_meta_box() {
+    add_meta_box(
+        'bcdlblue_sectioned_meta',            // Meta box ID
+        __('Sectioned', 'bcdlblue'),          // Title
+        'bcdlblue_sectioned_meta_callback',   // Callback function
+        ['post', 'page'],                     // Post types
+        'side',                               // Context (side box)
+        'default'                             // Priority
+    );
+}
+add_action('add_meta_boxes', 'bcdlblue_add_sectioned_meta_box');
+
+function bcdlblue_sectioned_meta_callback($post) {
+    $value = get_post_meta($post->ID, '_is_sectioned', true);
+    wp_nonce_field('bcdlblue_sectioned_nonce_action', 'bcdlblue_sectioned_nonce');
+    ?>
+    <label for="bcdlblue_sectioned_field">
+        <input type="checkbox" name="bcdlblue_sectioned_field" id="bcdlblue_sectioned_field" value="1" <?php checked($value, '1'); ?> />
+        <?php esc_html_e('Mark this as sectioned', 'bcdlblue'); ?>
+    </label>
+    <?php
+}
+
+function bcdlblue_save_sectioned_meta($post_id) {
+    // Verify nonce
+    if (!isset($_POST['bcdlblue_sectioned_nonce']) || 
+        !wp_verify_nonce($_POST['bcdlblue_sectioned_nonce'], 'bcdlblue_sectioned_nonce_action')) {
+        return;
+    }
+
+    // Prevent autosaves from overwriting
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    // Check permissions
+    if (!current_user_can('edit_post', $post_id)) {
+        return;
+    }
+
+    // Save or delete meta
+    if (isset($_POST['bcdlblue_sectioned_field']) && $_POST['bcdlblue_sectioned_field'] == '1') {
+        update_post_meta($post_id, '_is_sectioned', '1');
+    } else {
+        delete_post_meta($post_id, '_is_sectioned');
+    }
+}
+add_action('save_post', 'bcdlblue_save_sectioned_meta');

@@ -17,7 +17,7 @@ get_header();
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );?>
-			<div class="container my-4">
+			<div class="container"> <!-- container for the post navigation -->
 			<?php
 			the_post_navigation(
 				array(

@@ -21,7 +21,15 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
+			if ( get_post_meta( get_the_ID(), '_is_sectioned', true ) ) {
+				// Sectioned template part
+				get_template_part( 'template-parts/content', 'pagesectioned' );
+			} else {
+				// Regular template part
+				get_template_part( 'template-parts/content', 'page' );
+			}
+
+			
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
